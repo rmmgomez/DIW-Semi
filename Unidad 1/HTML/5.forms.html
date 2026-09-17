@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Mi primera página web en html5">
@@ -10,12 +11,15 @@
     <!-- <script src="" defer></script> -->
     <!-- <link rel="stylesheet" href=""> -->
 </head>
+
 <body>
     <form name="formularioEjemplo" method="post" action="#" autocomplete enctype="multipart/form-data">
-        <div><input type="email" name="email" placeholder="Introduce tu correo" required>   </div>     
-        <div><input type="tel" name="telefono" placeholder="+XX XXX XXXXXX" pattern="[0-9]{9}" title="9 dígitos" required></div>
+        <div><input type="email" name="email" placeholder="Introduce tu correo" required> </div>
+        <div><input type="tel" name="telefono" placeholder="+XX XXX XXXXXX" pattern="[0-9]{9}" title="9 dígitos"
+                required></div>
         <div><input type="url" name="web" placeholder="https://pagina.com/" required></div>
-        <div><input type="password" name="password" placeholder="Introduce tu pass" value="" required pattern="[A-Za-z0-9]{8,}" title="8 caracteres o más"></div>
+        <div><input type="password" name="password" placeholder="Introduce tu pass" value="" required
+                pattern="[A-Za-z0-9]{8,}" title="8 caracteres o más"></div>
         <!-- Número entre 5 y 50, de 5 en 5. Valor por defecto: 25 -->
         <div><input type="number" name="numero" value="25" min="5" max="50" step="5" /></div>
         <!-- Su misma versión, utilizando range -->
@@ -25,7 +29,7 @@
         <div><input type="datetime-local"></div>
 
         <div>
-            <select name="sistema" >
+            <select name="sistema">
                 <option value="ninguno">Selecciona tu SO</option>
                 <option value="windows">Windows</option>
                 <option value="linux">Linux</option>
@@ -35,27 +39,23 @@
         </div>
 
         <div>
-            <select name="sistema" multiple>
+            <select id="os-select">
                 <optgroup label="Windows">
-                    <option value="windows10" label="Windows 10"></option>
-                    <option value="windows8" label="Windows 8"></option>
-                    <option value="windows7" label="Windows 7"></option>
-                    <option value="windowsVista" label="Windows Vista"></option>
-                    <option value="windowsXP" label="Windows XP"></option>
+                    <option value="win11">Windows 11</option>
+                    <option value="win10">Windows 10</option>
+                    <option value="winvista">Windows Vista</option>
                 </optgroup>
                 <optgroup label="Linux">
-                    <option value="debian" label="Debian"></option>
-                    <option value="ubuntu" label="Ubuntu"></option>
-                    <option value="arch" label="Arch"></option>
-                    <option value="mint" label="Mint"></option>
-                    <option value="gentoo" label="Gentoo"></option>
+                    <option value="debian">Deban</option>
+                    <option value="ubuntu">Ubuntu</option>
+                    <option value="fedora">Fedora</option>
                 </optgroup>
             </select>
         </div>
 
         <div>
             <label>¿Qué navegador usas?:</label>
-            <input list="browsers" name="myBrowser" >
+            <input list="browsers" name="myBrowser">
             <datalist id="browsers">
                 <option value="Chrome"></option>
                 <option value="Firefox"></option>
@@ -66,9 +66,9 @@
             </datalist>
         </div>
         <div><input type="color" name="color" value="#F4F4F4"></div>
-        <div><input type="file" name="adjunto" accept=".pdf,.jpg,.png" multiple ></div>
+        <div><input type="file" name="adjunto" accept=".pdf,.jpg,.png" multiple></div>
         <div>
-            <meter min="0" max="100" value="91" low="50" high="90" ></meter>
+            <meter min="0" max="100" value="91" low="50" high="90"></meter>
         </div>
         <div>
             <input type="submit" value="Enviar">
@@ -77,4 +77,5 @@
         </div>
     </form>
 </body>
+
 </html>
