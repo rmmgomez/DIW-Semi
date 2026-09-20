@@ -1,0 +1,41 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.contenedor {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.flotante {
+    /* Estilo para las imágenes en el ejemplo */
+    width: 150px;
+    height: 150px;
+    margin: 0 10px 10px 0; /* Espacio inferior y derecho por defecto */
+    background-color: lightgray; /* Color de fondo por si la imagen no carga */
+    border: 1px solid black;
+}
+
+/* 1. float: left */
+.float-left {
+    /* Mueve la imagen a la izquierda. El texto la envuelve por la derecha. */
+    float: left;
+    margin-right: 15px; /* Añadimos espacio a la derecha para separar del texto */
+}
+
+/* 2. float: right */
+.float-right {
+    /* Mueve la imagen a la derecha. El texto la envuelve por la izquierda. */
+    float: right;
+    /* Ajustamos los márgenes: arriba, derecha, abajo, izquierda */
+    margin: 0 0 10px 15px;
+}
+
+/* 3. float: none */
+.float-none {
+    /* Es el valor por defecto. El elemento permanece en el flujo normal. */
+    float: none;
+    margin: 0 10px 10px 0;
+}

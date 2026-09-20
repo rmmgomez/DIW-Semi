@@ -1,0 +1,86 @@
+/* Estilo base para la superposición */
+.contenedor-apilado {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    margin: 50px;
+    border: 1px solid #ccc;
+}
+
+.caja {
+    position: absolute; /* ¡CLAVE! Hace que z-index funcione */
+    width: 150px;
+    height: 100px;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border: 1px solid black;
+    /* Las cajas están ligeramente desplazadas para que se superpongan */
+}
+
+.caja-roja {
+    background-color: red;
+    top: 20px;
+    left: 20px;
+    z-index: 1; /* El más bajo, queda abajo de todos */
+}
+
+.caja-azul {
+    background-color: blue;
+    top: 40px;
+    left: 40px;
+    z-index: -1; /* Queda entre la roja y la verde */
+}
+
+.caja-verde {
+    background-color: green;
+    top: 60px;
+    left: 60px;
+    z-index: 0; /* ¡El más alto, queda en la capa superior! */
+}
+
+.padre-rojo, .padre-verde {
+  position: absolute; /* Se convierten en contextos de apilamiento */
+  width: 250px;
+  height: 150px;
+  padding: 20px;
+  border: 3px solid black;
+}
+
+/* 1. Contexto de Apilamiento Rojo (z-index bajo) */
+.padre-rojo {
+  background-color: lightsalmon;
+  top: 50px;
+  left: 50px;
+  z-index: 2; /* ¡CLAVE! Este z-index es bajo */
+}
+
+.hijo-rojo {
+  position: absolute;
+  background-color: red;
+  color: white;
+  padding: 10px;
+  top: 50px;
+  left: 50px;
+  /* Un z-index altísimo... */
+  z-index: 999;
+}
+
+/* 2. Contexto de Apilamiento Verde (z-index alto) */
+.padre-verde {
+  background-color: lightgreen;
+  top: 10px;
+  left: 150px;
+  z-index: 5; /* ¡CLAVE! Este z-index es alto (mayor que 2) */
+}
+
+.hijo-verde {
+  position: absolute;
+  background-color: green;
+  color: white;
+  padding: 10px;
+  top: 50px;
+  left: 50px;
+  /* Un z-index bajo, pero no importa... */
+  z-index: 10;
+}

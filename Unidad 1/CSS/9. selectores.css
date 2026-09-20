@@ -1,0 +1,36 @@
+/* 1. SELECTOR UNIVERSAL (*) */
+/* Aplica a TODOS los elementos de la página. */
+/* Es útil para reseteos básicos. */
+* {
+    margin: 5px;
+    padding: 5px;
+}
+
+/* 2. SELECTOR DESCENDIENTE (espacio) */
+/* Selecciona TODOS los párrafos <p> que estén DENTRO */
+/* de main, sin importar a qué nivel. */
+main p {
+    background-color: #e0f7fa;
+}
+
+/* 3. SELECTOR DE HIJO DIRECTO (>) */
+/* Selecciona SÓLO los <p> que son HIJOS DIRECTOS de main. */
+/* NO afectará al párrafo "nieto" que está dentro de ".caja-interna". */
+main > p {
+    border: 2px solid #00796b; /* Borde verde oscuro */
+}
+
+/* 4. SELECTOR HERMANO ADYACENTE (+) */
+/* Selecciona el PRIMER <p> que está INMEDIATAMENTE DESPUÉS de un <h2>. */
+/* Solo el "Soy un párrafo HIJO DIRECTO del main" se verá afectado. */
+h2 + p {
+    font-weight: bold; /* Texto en negrita */
+    color: #d32f2f; /* Rojo */
+}
+
+/* 5. SELECTOR HERMANO GENERAL (~) */
+/* Selecciona TODOS los <p> que son hermanos de <h2> y vienen DESPUÉS, */
+/* sin importar si hay otros elementos en medio. */
+h2 ~ p {
+    text-decoration: underline; /* Subrayado */
+}

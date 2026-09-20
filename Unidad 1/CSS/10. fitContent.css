@@ -1,0 +1,36 @@
+.contenedor {
+  width: 400px;
+  border: 2px solid grey;
+  padding: 10px;
+}
+
+.caja-normal {
+  background-color: #ffcccc; /* Rojo claro */
+  margin-bottom: 10px;
+}
+
+.caja-fit-content {
+  width: fit-content;
+  background-color: #cceeff; /* Azul claro */
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+.caja-fit-content-larga {
+  width: fit-content;
+  background-color: #d4edda; /* Verde claro */
+}
+
+
+.caja-max-content {
+  width: max-content;
+  background-color: #fff3cd; /* Amarillo */
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+.caja-min-content {
+  width: min-content;
+  background-color: #e9d8fd; /* Morado claro */
+  padding: 10px;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo Float CSS</title>
+    <link rel="stylesheet" href="16. float.css">
+</head>
+<body>
+
+    <h2>Float: left (Flotar a la Izquierda)</h2>
+    <div class="contenedor">
+        <img class="flotante float-left" src="supermario.png" alt="Caja izquierda">
+        <p>Este párrafo envuelve la imagen. Cuando una imagen o cualquier otro elemento tiene un float: left, es sacado del flujo normal del documento y se empuja hacia el borde izquierdo de su contenedor. El contenido que le sigue (en este caso, este texto) fluirá a su alrededor por el lado derecho. Esto es ideal para maquetar textos de periódicos o artículos donde quieres que las imágenes se integren con el cuerpo del texto.</p>
+    </div>
+
+    <hr>
+
+    <h2>Float: right (Flotar a la Derecha)</h2>
+    <div class="contenedor">
+        <img class="flotante float-right" src="supermario.png" alt="Caja derecha">
+        <p>Aquí tenemos otro ejemplo, pero esta vez la imagen tiene un float: right. Esto significa que la imagen se empuja hacia el borde derecho de su contenedor, y el texto de este párrafo fluirá a su alrededor por el lado izquierdo. Observa cómo el contenido subsiguiente siempre se adapta al espacio disponible. Si el texto es lo suficientemente largo, continuará debajo de la imagen una vez que haya llenado el espacio a su lado.</p>
+    </div>
+
+    <hr>
+
+    <h2>Float: none (Sin Flotación)</h2>
+    <div class="contenedor">
+        <img class="flotante float-none" src="supermario.png" alt="Caja sin float">
+        <p>Este elemento tiene float: none, que es el valor por defecto. Como puedes ver, la imagen se comporta como un elemento inline, y el texto simplemente comienza después de ella, sin envolverla. Ambos elementos mantienen su posición en el flujo normal del documento, uno después del otro, sin interactuar para maquetar el espacio.</p>
+    </div>
+
+</body>
+</html>

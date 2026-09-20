@@ -1,0 +1,16 @@
+/* Estilos para el tíulo principal de la web */
+h1{
+    text-align: center;
+    color: blue;
+}
+/* Estilos para el párrafo */
+p{
+    color: red;
+}
+
+#elemento{
+    color: pink;
+}
+.classElem{
+    color: gray;
+}

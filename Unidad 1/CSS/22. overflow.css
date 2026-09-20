@@ -1,0 +1,29 @@
+.visible {
+  width: 200px;
+  height: 50px;
+  border: 2px solid blue;
+  /* El contenido se saldrá de la caja */
+  overflow: visible; 
+}
+
+.hidden {
+  width: 200px;
+  height: 50px;
+  border: 2px solid red;
+  /* El contenido que no cabe desaparece */
+  overflow: hidden; 
+}
+.scroll {
+  width: 200px;
+  height: 50px;
+  border: 2px solid green;
+  /* Las barras de desplazamiento SIEMPRE aparecen (tanto horizontal como vertical) */
+  overflow: scroll; 
+}
+.auto {
+  width: 200px;
+  height: 50px;
+  border: 2px solid purple;
+  /* Las barras de desplazamiento aparecen SÓLO cuando el contenido lo requiere */
+  overflow: auto; 
+}

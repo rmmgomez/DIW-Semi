@@ -1,0 +1,119 @@
+/* Estilos base para un look moderno */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --bg-color: #f8f9fa;
+    --font-color: #343a40;
+    --border-color: #dee2e6;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    padding: 2rem;
+}
+
+h1 {
+    text-align: center;
+    color: var(--font-color);
+    margin-bottom: 2rem;
+}
+
+.file-list {
+    max-width: 600px;
+    margin: auto;
+}
+
+.file-item {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-left: 5px solid var(--secondary-color);
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    display: block;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.file-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-left-color: var(--primary-color);
+}
+
+
+/* --- 🎨 AQUÍ EMPIEZAN LOS SELECTORES DE ATRIBUTOS --- */
+
+/* 1. Selector de PRESENCIA [attribute] */
+/* Si el enlace tiene el atributo 'download', le añade un icono de descarga. */
+a[download]::after {
+    content: ' 📥';
+}
+
+/* 2. Selector de IGUALDAD [attribute="value"] */
+/* Si el atributo 'data-status' es exactamente "revisado", le pone el borde verde. */
+a[data-status="revisado"] {
+    border-left-color: var(--success-color);
+}
+a[data-status="revisado"]::before {
+    content: '✓ ';
+    color: var(--success-color);
+    font-weight: bold;
+}
+
+/* 3. Selector de COMIENZO [attribute^="value"] */
+/* Si el 'href' comienza con "https", se asume que es seguro. */
+a[href^="https"] {
+    border-left-color: #20c997; /* Un verde menta para enlaces seguros */
+}
+a[href^="https"]::after {
+    content: ' 🔒'; /* Añade un candado */
+}
+
+/* 4. Selector de CONTENIDO [attribute*="value"] */
+/* Si el 'href' contiene la palabra "google", es un enlace externo. */
+a[href*="google"] {
+    background-color: #fffbeb; /* Un amarillo pálido */
+}
+a[href*="google"]::after {
+    content: ' ↗️'; /* Icono de enlace externo */
+}
+
+/* 5. Selector de FINAL [attribute$="value"] */
+/* Si el 'href' termina en ".pdf", lo identifica como un documento PDF. */
+a[href$=".pdf"] {
+    color: #ae2d2d;
+}
+a[href$=".pdf"]::before {
+    content: '📄 '; /* Icono de documento */
+}
+/* Sobrescribimos el icono de descarga para que el de PDF tenga prioridad */
+a[href$=".pdf"][download]::after {
+    content: ' (PDF Descargable)';
+}
+
+
+/* 6. Selector de VALOR EN LISTA [attribute~="value"] */
+/* Si en la lista de 'data-tags' (separada por espacios) está la palabra "urgente". */
+a[data-tags~="urgente"] {
+    border-left-color: var(--danger-color);
+    color: var(--danger-color);
+    font-weight: bold;
+}
+
+/* 7. Selector de SUBCÓDIGO [attribute|="value"] */
+/* Si el atributo 'lang' es "en" o empieza por "en-" (como "en-US" o "en-GB"). */
+a[lang|="en"]::after {
+    content: ' (English)';
+    font-style: italic;
+    font-size: 0.8em;
+    color: var(--secondary-color);
+    margin-left: 8px;
+}

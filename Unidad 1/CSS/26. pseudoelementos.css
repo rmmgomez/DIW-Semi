@@ -1,0 +1,13 @@
+.etiqueta::before {
+    content: "🔥";
+}
+.etiqueta::after {
+    content: "🔥";
+}
+h1::first-letter{
+     color: red;
+     font-size: 40px;
+}
+p::first-line{
+     color: #999;
+}

@@ -1,0 +1,32 @@
+body {
+    /* --- PROPIEDADES DE FONDO APLICADAS A TODA LA PÁGINA --- */
+    
+    /* 1. La imagen que usaremos */
+    background-image: url('https://images.unsplash.com/photo-1502899576159-f224dc2349fa?auto=format&fit=crop&w=1950');
+    
+    /* 2. Para que no se repita */
+    background-repeat: no-repeat;
+    
+    /* 3. Para que se mantenga fija al hacer scroll */
+    background-attachment: fixed;
+    
+    /* 4. Para que se centre y cubra toda la pantalla */
+    background-position: center;
+    background-size: cover;
+    
+    /* Fuente para el texto */
+    font-family: sans-serif;
+}
+
+main {
+    /* Estilos para la caja de texto */
+    max-width: 700px;
+    margin: 50px auto; /* Centra la caja horizontalmente */
+    padding: 30px;
+    
+    /* Fondo blanco con 85% de opacidad para que se vea la imagen de detrás */
+    background-color: rgba(255, 255, 255, 0.85);
+    
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra suave */
+}

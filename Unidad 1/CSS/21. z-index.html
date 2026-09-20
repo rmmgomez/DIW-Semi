@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo selectores</title>
+    <link rel="stylesheet" href="21. z-index.css" />
+  </head>
+
+  <body>
+    <!--     <main class="contenedor-apilado">
+        <div class="caja caja-roja">Caja 1: z-index: 1</div>
+        <div class="caja caja-verde">Caja 2: z-index: 5 (¡Arriba!)</div>
+        <div class="caja caja-azul">Caja 3: z-index: 3</div>
+    </main> -->
+    <div class="padre-rojo">
+      Padre Rojo: z-index: 2
+      <div class="hijo-rojo">Hijo Rojo: z-index: 999</div>
+    </div>
+
+    <div class="padre-verde">
+      Padre Verde: z-index: 5
+      <div class="hijo-verde">Hijo Verde: z-index: 10</div>
+    </div>
+  </body>
+</html>

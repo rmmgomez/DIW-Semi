@@ -1,0 +1,14 @@
+.enlace-normal {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+
+.no-permitido {
+    cursor: not-allowed;
+    color: gray;
+}
+
+.cargando {
+    cursor: wait;
+}

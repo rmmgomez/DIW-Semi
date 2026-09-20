@@ -1,0 +1,67 @@
+.caja-static {
+  position: static; /* No hace falta declararlo, es el valor inicial */
+  background-color: lightgray;
+  /* Estas propiedades NO funcionarán: */
+  top: 10px;
+  left: 10px;
+}
+.caja-relative {
+  position: relative;
+  background-color: lightgreen;
+  /* El elemento se mueve 20px *desde* la izquierda y 20px *desde* la parte superior. */
+  left: 20px;
+  top: 20px;
+}
+
+.caja-normal {
+  background-color: lightblue;
+  /* Nota: La caja normal no se mueve para ocupar el espacio libre que dejó la caja relativa. */
+}
+.contenedor-relativo {
+  position: relative; /* ¡CLAVE! Hace que la caja-absolute se posicione respecto a él. */
+  width: 300px;
+  height: 150px;
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+.caja-absolute {
+  position: absolute;
+  background-color: lightcoral;
+  /* Posiciona la caja 10px desde la parte superior del contenedor-relativo */
+  top: 10px;
+  /* Posiciona la caja 5px desde la derecha del contenedor-relativo */
+  right: 5px;
+}
+
+.caja-fija {
+    /* La magia sucede aquí */
+    position: fixed;
+    top: 20px;
+    /* 20px desde arriba */
+    right: 20px;
+    /* 20px desde la derecha */
+
+    /* Estilos para que se vea bien */
+    background-color: #2e7d32;
+    /* Un verde oscuro */
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    /* Asegura que esté por encima de otros elementos */
+}
+
+.caja-sticky {
+  position: sticky;
+  background-color: gold;
+  padding: 15px;
+  /* La propiedad que define cuándo "pegarse" */
+  top: 0;
+  /* Esto significa: "Mantente en position: relative hasta que mi borde superior
+     toque los 0px de la parte superior del viewport, entonces compórtate como fixed." */
+}
+.importante{
+    z-index: 1000;
+}

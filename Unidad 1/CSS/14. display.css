@@ -1,0 +1,70 @@
+/* Estilo base para todos los ejemplos */
+.box {
+    padding: 10px;
+    margin: 5px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
+
+/* 1. display: none */
+#display-none-box {
+    /* ¡El elemento desaparece por completo y no afecta al layout! */
+    display: none;
+}
+
+/* 2. display: block */
+.block {
+    /* Es el comportamiento por defecto de <div>, <p>, <h1>, etc. */
+    display: block;
+    width: 200px; /* Se respeta el ancho y el alto */
+}
+
+/* 3. display: inline */
+.inline {
+    /* Es el comportamiento por defecto de <span>, <a>, <strong>, etc. */
+    display: inline;
+    /* Los elementos inline IGNORAN el ancho y alto que intentes darles */
+    width: 200px; /* No tendrá efecto */
+    height: 50px; /* No tendrá efecto */
+    background-color: yellow;
+}
+
+/* 4. display: inline-block */
+.inline-block {
+    /* Combina las mejores propiedades: están en línea Y aceptan dimensiones */
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    background-color: lightblue;
+    text-align: center;
+}
+
+/* 5. display: list-item */
+.list-item {
+    /* Se comporta como block y añade la viñeta de una lista (como <li>) */
+    display: list-item;
+    background-color: #e6ffe6;
+    list-style-type: disc; /* Define el tipo de viñeta */
+    margin-left: 20px;
+}
+
+/* 6. display: table y table-row */
+#my-table {
+    /* El contenedor principal se comporta como una tabla */
+    display: table;
+    border: 2px solid darkgreen;
+    width: 300px;
+}
+
+.row {
+    /* Los divs internos se comportan como filas */
+    display: table-row;
+}
+
+/* Si quisieras celdas: */
+.row div {
+    /* Esto simularía una celda <td> */
+    display: table-cell;
+    border: 1px solid green;
+    padding: 5px;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo Propiedad clear</title>
+    <link rel="stylesheet" href="17. clear.css">
+</head>
+<body>
+    <h1>Propiedad clear: El Fin de la Flotación</h1>
+
+    <h2>1. clear: left</h2>
+    <div class="flotante float-left">Flotador Izq. 1</div>
+    <div class="flotante float-left">Flotador Izq. 2</div>
+    
+    <div class="limpiador clear-left">
+        Yo uso clear: left. Me obligo a saltar una línea debajo de cualquier flotador izquierdo que me preceda.
+    </div>
+
+    ---
+
+    <h2>2. clear: right</h2>
+    <div class="flotante float-right">Flotador Der. 1</div>
+    <div class="flotante float-right">Flotador Der. 2</div>
+
+    <div class="limpiador clear-right">
+        Yo uso clear: right. Me obligo a saltar una línea debajo de cualquier flotador derecho que me preceda.
+    </div>
+
+    ---
+
+    <h2>3. clear: both</h2>
+    <div class="flotante float-left">Flotador Izq.</div>
+    <div class="flotante float-right">Flotador Der.</div>
+
+    <div class="limpiador clear-both">
+        Yo uso clear: both. Me salto cualquier flotador (izquierdo o derecho) que esté sobre mí.
+    </div>
+
+    ---
+
+    <h2>4. clear: none (Comportamiento por defecto)</h2>
+    <div class="flotante float-left">Flotador Izq.</div>
+    <div class="sin-clear">
+        Yo tengo clear: none (el valor por defecto). No me salto el flotador izquierdo y me pongo a su lado.
+    </div>
+</body>
+</html>

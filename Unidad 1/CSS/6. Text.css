@@ -1,0 +1,39 @@
+h1{
+    letter-spacing: 5px;
+/*     text-align: center;
+    text-shadow: 5px -5px 2px #444; */
+}
+#palabras{
+    word-spacing: 5px;
+}
+#lineas{
+    line-height: 3em;
+    text-indent: 5vw;    
+}
+article{
+    width: 300px;
+    padding: 16px;
+    border-radius: 10px;
+    
+}
+#aPrimero{
+    white-space: wrap;
+}
+#aSegundo{
+    border: 2px solid black;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#aTercero{
+    
+    direction: rtl;
+}
+pre{
+    tab-size: 4;
+}
+span{
+    vertical-align: super;
+    text-decoration: overline;
+    text-transform: uppercase;
+}

@@ -1,0 +1,28 @@
+/* .mi-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto; 
+}
+
+.mi-tabla th, .mi-tabla td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+} */
+ .mi-tabla {
+  width: 100%;
+  border-collapse: separate;  
+  border-spacing: 8px;
+  empty-cells: hide;
+  table-layout: fixed; /* Las columnas se basan en el ancho de la tabla y de la primera fila */
+}
+
+.mi-tabla th, .mi-tabla td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+  width: 50%; /* Especificamos que cada columna ocupe el 50% */
+  overflow: hidden; /* Oculta el contenido que no cabe */
+  text-overflow: ellipsis; /* Añade "..." al final del texto cortado */
+  white-space: nowrap; /* Evita que el texto salte de línea */
+}

@@ -1,0 +1,25 @@
+.flex{
+    display: flex;
+    gap: 20px;
+    background-color: #700000;
+}
+.flex a{
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+     background-color: #700000;
+}
+nav ul.menuPrincipal {
+     list-style-type: none;
+     text-align: center;
+}
+nav ul.menuPrincipal li {
+     display: inline;
+     padding: 1%;
+}
+ul.menuPrincipal li a {
+     color: white;
+     text-decoration: none;
+}

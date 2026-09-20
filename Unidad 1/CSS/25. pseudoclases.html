@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="25. pseudoclases.css" />
+  </head>
+  <body>
+    <h1>Ejemplo de pseudoclases</h1>
+    <a href="https://www.marca.com">Google</a><br />
+    <a href="https://www.diarioinformacion.com">IES</a><br />
+    <form>
+      <label for="campo">Escribe algo:</label>
+      <input type="text" id="campo" class="input-foco" />
+
+      <br /><br />
+
+      <input type="checkbox" id="acepto" />
+      <label for="acepto" class="label-check">Acepto los términos</label>
+    </form>
+    <form>
+      <h3>Demostración de Estados de Campo</h3>
+
+      <div class="campo">
+        <label for="editable">Campo Editable (:read-write & :enabled)</label>
+        <input type="text" id="editable" placeholder="Puedes escribir aquí." />
+      </div>
+
+      <div class="campo">
+        <label for="solo-lectura">Campo Sólo Lectura (:read-only)</label>
+        <input
+          type="text"
+          id="solo-lectura"
+          value="Sólo puedo leerte."
+          readonly
+        />
+      </div>
+
+      <div class="campo">
+        <label for="desactivado">Campo Desactivado (:disabled)</label>
+        <input type="text" id="desactivado" value="Estoy inactivo." disabled />
+      </div>
+    </form>
+    <div id="contenido">
+     <div class="articulo">
+          <strong>Primer mensaje</strong>
+          <span >Segundo mensaje</span>
+          <strong >Tercer mensaje</strong>
+          <strong >Último mensaje</strong>
+     </div>
+     <div class="articulo">
+          <strong>Primer mensaje</strong>
+          <strong >Segundo mensaje</strong>
+          <span >Tercer mensaje</span>
+          <strong >Cuarto mensaje</strong>
+          <strong >Último mensaje</strong>
+     </div>
+</div>
+  </body>
+</html>

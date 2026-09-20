@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="22. overflow.css" />
+  </head>
+  <body>
+    <!-- <div class="caja visible">
+      Este texto es muy largo y debería salirse de la caja. ¡Mira cómo sigue
+      fluyendo por fuera de los límites definidos! Esto es útil cuando no te
+      importa que el contenido exceda los límites visuales de la caja.
+    </div> -->
+    <div class="caja hidden">
+      Este texto es muy largo y será recortado. Solo la parte que cabe en el
+      espacio de 50px de altura será visible para el usuario. El resto
+      desaparece.
+    </div>
+    <div class="caja scroll">
+      Texto de ejemplo para la caja con scroll. La barra de desplazamiento
+      siempre aparece, aunque el contenido no sea suficiente para llenarla por
+      completo.
+    </div>
+    <div class="caja auto">
+      Este texto es muy largo y obligará al navegador a mostrar una barra de
+      desplazamiento vertical para que el usuario pueda leer todo el contenido
+      que excede el límite de 50px de altura. Si el texto fuese corto, no
+      aparecería ninguna barra.
+    </div>
+  </body>
+</html>

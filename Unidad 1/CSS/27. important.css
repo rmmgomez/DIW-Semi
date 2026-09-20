@@ -1,0 +1,17 @@
+div{
+     color: red !important;
+     padding: 8px;
+}
+
+div{
+    text-decoration: dotted;
+     color: blue;
+     background-color: gainsboro;
+}
+
+/* div{
+ padding: 8px;
+    text-decoration: dotted;
+     color: red !important;
+     background-color: gainsboro;
+} */

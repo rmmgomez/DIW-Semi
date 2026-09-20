@@ -1,0 +1,107 @@
+/* Se aplica a los enlaces (<a>) que nunca han sido visitados por el usuario. */
+a:link {
+    color: #007bff;
+    text-decoration: none; /* Sin subrayado por defecto */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+/* Se aplica a los enlaces (<a>) que han sido visitados por el usuario. */
+a:visited {
+    color: #28a745; /* Verde para indicar que ya lo vimos */
+    text-decoration: none;
+    font-weight: normal;
+}
+/* Se aplica cuando el cursor está sobre el enlace. */
+a:hover {
+    color: #dc3545;
+    cursor: crosshair;
+    text-decoration: underline;
+}
+
+/* Se aplica en el momento exacto en que se hace click. */
+a:active {
+    color: #6f42c1;
+}
+
+.input-foco {
+    padding: 8px;
+    border: 1px solid gray;
+    transition: all 0.2s; /* Hacemos la transición suave */
+}
+
+/* Cuando el usuario hace click o tabula aquí: */
+.input-foco:focus {
+    border-color: #f39c12;
+    background-color: #fffacd;
+    outline: none; /* Elimina el borde azul nativo */
+}
+
+/* Estilos de la etiqueta por defecto */
+.label-check {
+    color: #333;
+    font-weight: normal;
+}
+
+/* Cuando la casilla está marcada: */
+/* La pseudoclase se aplica al input, pero usamos el selector de hermano adyacente (+) */
+/* para aplicar el estilo a la etiqueta (label) que está al lado. */
+#acepto:checked + .label-check {
+    /* CLAVE: Cambiar el estilo de la etiqueta para confirmar la selección */
+    color: #27ae60;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+body { padding: 20px; }
+.campo { margin-bottom: 15px; }
+input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+
+/* Cuando el campo tiene el atributo disabled */
+input[type="text"]:disabled {
+    background-color: #f8f9fa;
+    color: #a0a0a0; 
+    border-style: dashed;
+    cursor: not-allowed; 
+}
+
+
+/* Cuando el campo tiene el atributo readonly */
+input[type="text"]:read-only {
+    background-color: #ffe0b2;
+    border-color: #ff9800;
+    color: #5d4037;
+}
+
+/* Cuando el campo NO tiene los atributos readonly O disabled */
+input[type="text"]:read-write {
+    background-color: #e8f5e9;
+    border-color: #4caf50;
+    font-weight: bold;
+}
+
+/* Cuando el campo NO tiene el atributo disabled */
+/* Es similar a :read-write, pero engloba a :read-write Y :read-only */
+/* Aquí la aplicamos al :read-write para añadirle un foco cuando esté activo */
+input[type="text"]:enabled:focus {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Halo azul de foco */
+    border-color: #007bff;
+}
+
+strong:first-of-type{
+     background-color: yellow;
+}
+strong:nth-of-type(2){
+     background-color: green;
+}
+strong:nth-last-of-type(1){
+     background-color: blue;
+}
