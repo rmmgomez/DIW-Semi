@@ -5,16 +5,9 @@ button {
 
 /* 2. Vinculamos el popover a ese anclaje */
 [popover] {
-    /* Le indicamos a qué ancla debe seguir */
     position-anchor: --boton-avatar;
-
-    /* Lo posicionamos justo en la zona inferior del botón */
     position-area: bottom;
-
-    /* Eliminamos el margen automático que lo centraba en la pantalla */
     margin: 0;
-
-    /* Tus estilos visuales originales */
     background-color: #1a1a24;
     color: white;
     border: 1px solid #333;
