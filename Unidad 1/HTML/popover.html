@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ponemos un poco de CSS porque sino es muy cutre -->
+    <link rel="stylesheet" href="style.css">
+    <title>Popover rules!</title>
+</head>
+
+<body>
+    <button commandFor="account-menu" command="toggle-popover">
+        <span class="avatar">HTML y CSS</span>
+        <span>Rosa Medina</span>
+    </button>
+
+    <div id="account-menu" popover>
+        <p>Plantas</p>
+        <p>Bicicletas</p>
+        <p>Jamones</p>
+    </div>
+</body>
+
+</html>
