@@ -1,0 +1,30 @@
+div {
+    /* Especificidad: 0, 0, 0, 1 */
+    color: red;
+    padding: 8px;
+}
+
+div#mensaje {
+    /* Especificidad: 0, 1, 0, 1 */
+    color: blue;
+}
+
+#mensaje {
+    /* Especificidad: 0, 1, 0, 0 */
+    color: orange;
+}
+
+div#mensaje:hover {
+    /* Especificidad: 0, 1, 1, 1 */
+    color: pink;
+}
+
+div.error:hover::before {
+    /* Especificidad: 0, 0, 2, 2 */
+    color: green;
+    content: '🍕';
+}
+
+/* id,
+clase/pseudoclase/atributo,
+elemento/pseudoelemento */
