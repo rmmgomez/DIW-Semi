@@ -4,13 +4,13 @@
     padding: 0;
 }
 
-.miGrid {
+body {
     gap: 20px;
     /* Separación de cada celda del grid */
     width: 100%;
     max-width: 1200px;
     height: 100vh;
-    display: grid;    
+    display: grid;
     grid-template-columns: [aside-start]1fr [aside-end card1-start]1fr [card1-end]1fr [card2-start card2-mid]1fr [card2-mid2 card2-end];
     grid-template-rows: [header]100px [main]3fr [card]1fr [footer]100px;
 
@@ -28,7 +28,7 @@
 
     .header {
         background-color: #4a90e2;
-        
+
         /* Forma Abreviada: Empieza en la línea 1 y termina en la última (-1) */
         grid-column: aside-start / card2-end;
         grid-row: header;
@@ -45,6 +45,7 @@
         grid-column: aside-end / card2-end;
         grid-row: main;
     }
+
     .card-1 {
         background-color: #50e3c2;
         grid-column: aside-end / card1-end;
@@ -56,6 +57,7 @@
         grid-column: card1-end / card2-end;
         grid-row: card;
     }
+
     .footer {
         background-color: #4a4a4a;
         grid-column: aside-start / card2-end;

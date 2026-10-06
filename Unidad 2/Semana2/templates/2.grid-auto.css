@@ -1,11 +1,15 @@
 body {
+    display: grid;
+    justify-items: center;
     font-family: sans-serif;
     background-color: #f0f0f0;
 }
 
-.grid-container {
+main {
+    width: 100%;
     max-width: 600px;
-    margin: 40px auto;
+    box-sizing: border-box;
+    margin-block: 40px;
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
@@ -28,7 +32,7 @@ body {
     /* 4. Indicamos que llene por filas y rellene los huecos vacíos (dense) */
     gap: 15px;
 
-    .item {
+    article {
         background-color: #3498db;
         color: white;
         display: flex;

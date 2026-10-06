@@ -41,10 +41,10 @@ header h1 {
         /* flex: <flex-grow> <flex-shrink> <flex-basis>; */
         flex: 1 1 250px;
         /*
-                       - flex-grow: 1 -> Puede crecer
-                       - flex-shrink: 1 -> Puede encogerse
-                       - flex-basis: 250px -> Tamaño inicial de 250px
-                     */
+        - flex-grow: 1 -> Puede crecer
+        - flex-shrink: 1 -> Puede encogerse
+        - flex-basis: 250px -> Tamaño inicial de 250px
+        */
 
         padding: 20px;
         border: 1px solid #ddd;
@@ -78,8 +78,6 @@ header h1 {
             padding: 10px 15px;
             border-radius: 5px;
             cursor: pointer;
-            margin-top: auto;
-            /* Se asegura de que se alinee al final si hay espacio */
         }
 
         /* --- Modificaciones para la tarjeta destacada --- */

@@ -4,13 +4,13 @@
     padding: 0;
 }
 
-.miGrid {
+body {
     gap: 20px;
     /* Separación de cada celda del grid */
     width: 100%;
     max-width: 1200px;
     height: 100vh;
-    display: grid;    
+    display: grid;
     grid-template-columns: repeat(4, [col-start] 1fr [col-end]);
     grid-template-rows: [header]100px [main]3fr [card]1fr [footer]100px;
 
@@ -44,6 +44,7 @@
         grid-column: col-start 2 / col-end 4;
         grid-row: main;
     }
+
     .card-1 {
         background-color: #50e3c2;
         grid-column: col-start 2 / col-start 3;

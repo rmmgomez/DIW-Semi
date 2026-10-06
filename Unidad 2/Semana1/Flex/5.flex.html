@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio Flexbox - Items</title>
+    <link rel="stylesheet" href="5.flex.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Laboratorio Flexbox 🔬 - Propiedades de los Items</h1>
+    </header>
+
+    <main>
+        <section class="scenario grow-shrink">
+            <h2>Escenario 1: Crecimiento (grow) y Encogimiento (shrink)</h2>
+            <p>El contenedor es ancho, dejando espacio libre. Los items con <code>flex-grow</code> mayor que 0 se lo
+                repartirán. Si haces la ventana más estrecha, los items con <code>flex-shrink</code> mayor que 0 cederán
+                su
+                espacio.</p>
+            <div class="flex-container">
+                <article class="item-1">1</article>
+                <article class="item-2">2</article>
+                <article class="item-3">3</article>
+                <article class="item-4">4</article>
+            </div>
+        </section>
+
+        <section class="scenario order-align">
+            <h2>Escenario 2: Orden (order) y Auto-alineación (align-self)</h2>
+            <p>La propiedad <code>order</code> cambia el orden visual sin tocar el HTML. La propiedad
+                <code>align-self</code> permite a un item ignorar la alineación general (<code>align-items</code>) del
+                contenedor.
+            </p>
+            <div class="flex-container">
+                <article class="item-1">1</article>
+                <article class="item-2">2</article>
+                <article class="item-3">3</article>
+                <article class="item-4">4</article>
+                <article class="item-5">5</article>
+            </div>
+        </section>
+
+        <section class="scenario shorthand">
+            <h2>Escenario 3: El atajo 'flex'</h2>
+            <p>La propiedad <code>flex</code> es la forma más común de definir la flexibilidad de un item, combinando
+                <code>flex-grow</code>, <code>flex-shrink</code> y <code>flex-basis</code>.
+            </p>
+            <div class="flex-container">
+                <article class="item-1">1</article>
+                <article class="item-2">2</article>
+                <article class="item-3">3</article>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>

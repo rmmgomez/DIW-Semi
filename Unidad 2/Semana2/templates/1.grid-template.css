@@ -4,7 +4,7 @@
     padding: 0;
 }
 
-.miGrid {
+body {
     gap: 20px;
     /* Separación de cada celda del grid */
     width: 100%;
@@ -47,10 +47,10 @@
         grid-column-start: 1;
         grid-column-end: 2;
         /* Forma corta: grid-column: 1 /2;  */
-        
+
         grid-row-start: 2;
         grid-row-end: 4;
-        /* Forma corta: grid-row: 2 / 4;  */        
+        /* Forma corta: grid-row: 2 / 4;  */
         /* Podríamos usar 'span 2' aquí también ( 2 / span 2)*/
     }
 
