@@ -11,7 +11,7 @@ header h1 {
 }
 
 /* --- Propiedades del Contenedor Padre --- */
-.galeria-productos {
+main {
     display: flex;
     flex-direction: row-reverse;
     /* 1. Activa Flexbox */
