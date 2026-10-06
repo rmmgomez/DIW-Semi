@@ -1,0 +1,166 @@
+/* --- ESTILOS BÁSICOS (NO ES NECESARIO TOCAR AQUÍ) --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    padding: 2rem;
+}
+
+.info {
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    background: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    h1 {
+        text-align: center;
+    }
+}
+
+
+/* ========================================================================== */
+/* ▼▼▼ ¡AQUÍ EMPIEZA LA MAGIA! MODIFICA ESTOS VALORES ▼▼▼ */
+/* ========================================================================== */
+
+#flex-container {
+    max-width: 800px;
+    min-height: 450px;
+    /* Altura mínima para ver bien el efecto de align-items */
+    margin: 2rem auto;
+    padding: 1rem;
+    border: 3px dashed #6c757d;
+    border-radius: 8px;
+    background-color: #ffffff;
+
+    /* 1. La propiedad fundamental para activar Flexbox */
+    display: flex;
+
+    /* ====================================================================
+            2. flex-direction: Define la dirección del eje principal (filas o columnas).
+            ====================================================================
+            Valores posibles:
+            - row: (por defecto) Izquierda a derecha.
+            - row-reverse: Derecha a izquierda.
+            - column: Arriba hacia abajo.
+            - column-reverse: Abajo hacia arriba.
+            */
+    flex-direction: row;
+
+    /* ====================================================================
+            3. justify-content: Alinea los items a lo largo del eje principal.
+            ====================================================================
+            (Si flex-direction es 'row', los alinea horizontalmente)
+            Valores posibles:
+            - flex-start: (por defecto) Los items se pegan al inicio.
+            - flex-end: Los items se pegan al final.
+            - center: Los items se agrupan en el centro.
+            - space-between: Espacio igual entre los items (el primero al inicio, el último al final).
+            - space-around: Espacio igual alrededor de cada item (los extremos tienen la mitad de espacio).
+            - space-evenly: Espacio perfectamente igual entre todos los items y los extremos.
+            */
+    justify-content: center;
+
+    /* ====================================================================
+            4. align-items: Alinea los items a lo largo del eje secundario.
+            ====================================================================
+            (Si flex-direction es 'row', los alinea verticalmente)
+            Valores posibles:
+            - stretch: (por defecto) Los items se estiran para ocupar todo el espacio. (NOTA: no funciona si los items tienen un 'height' definido).
+            - flex-start: Los items se pegan al inicio del eje secundario (arriba).
+            - flex-end: Los items se pegan al final del eje secundario (abajo).
+            - center: Los items se centran en el eje secundario.
+            - baseline: Los items se alinean según su línea base de texto.
+            */
+    align-items: center;
+
+    /* ====================================================================
+            5. flex-wrap: Permite que los items salten a la siguiente línea si no caben.
+            ====================================================================
+            Valores posibles:
+            - nowrap: (por defecto) Todos los items en una sola línea (se encogerán si es necesario).
+            - wrap: Los items que no caben saltan a la línea de abajo.
+            - wrap-reverse: Los items que no caben saltan a la línea de arriba.
+            */
+    flex-wrap: wrap;
+
+    /* ====================================================================
+            6. align-content: Alinea las LÍNEAS de items (solo funciona con 'flex-wrap: wrap' y varias líneas).
+            ====================================================================
+            Valores posibles: (similares a justify-content pero para el eje secundario)
+            - flex-start: Todas las líneas se agrupan arriba.
+            - flex-end: Todas las líneas se agrupan abajo.
+            - center: Todas las líneas se agrupan en el centro.
+            - space-between: Espacio igual entre las líneas.
+            - space-around: Espacio igual alrededor de cada línea.
+            - stretch: (por defecto) Las líneas se estiran para ocupar todo el espacio.
+            */
+    align-content: center;
+
+    /* ====================================================================
+            7. gap: Define el espacio entre los items (más moderno que usar márgenes).
+            ====================================================================
+            */
+    gap: 20px;
+    /* Espacio igual para filas y columnas */
+    /* row-gap: 30px; */
+    /* Espacio solo para las filas */
+    /* column-gap: 10px; */
+    /* Espacio solo para las columnas */
+
+
+    /* ====================================================================
+            8. flex-flow: Es un atajo (shorthand) para 'flex-direction' y 'flex-wrap'.
+            ====================================================================
+            */
+    /* flex-flow: column wrap; */
+    /* Descomenta esta línea para probarla (y comenta las propiedades individuales) */
+
+
+    /* ====================================================================
+            ESTILOS PARA LOS HIJOS - ITEM
+            ====================================================================
+            */
+    .flex-item {
+        /* Estilos de los hijos para que sean visibles */
+        min-width: 100px;
+        height: 100px;
+        background-color: #007bff;
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+        border-radius: 6px;
+
+        /* Centramos el número dentro de cada caja */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* Colores distintos para cada item */
+        &.item-1 {
+            background-color: #e63946;
+        }
+
+        &.item-2 {
+            background-color: #f1faee;
+            color: #1d3557;
+        }
+
+        &.item-3 {
+            background-color: #a8dadc;
+            color: #1d3557;
+            font-size: 3rem;
+        }
+
+        &.item-4 {
+            background-color: #457b9d;
+        }
+
+        &.item-5 {
+            background-color: #1d3557;
+            padding-top: 20px;
+            font-size: 1.5rem;
+        }
+    }
+}

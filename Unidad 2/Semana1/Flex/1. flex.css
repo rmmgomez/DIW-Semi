@@ -1,0 +1,107 @@
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+}
+
+header h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* --- Propiedades del Contenedor Padre --- */
+.galeria-productos {
+    display: flex;
+    flex-direction: row-reverse;
+    /* 1. Activa Flexbox */
+    gap: 20px;
+    /* Espacio entre las tarjetas */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    /* 2. Permite que los elementos pasen a la siguiente línea si no caben */
+    flex-wrap: wrap;
+    /* Reduce el tamaño de la pantalla para verlo */
+
+    /* 3. Distribuye el espacio sobrante alrededor de los elementos */
+    justify-content: space-around;
+
+
+    /* --- Propiedades de los Elementos Hijos (Tarjetas) --- */
+    .tarjeta-producto {
+        /* --- Flexbox Interno (la tarjeta también es un contenedor) --- */
+        display: flex;
+        flex-direction: column;
+        /* Organiza el contenido de la tarjeta en vertical */
+
+        /* --- Propiedades como Elemento Flexible --- */
+        /* flex: <flex-grow> <flex-shrink> <flex-basis>; */
+        flex: 1 1 250px;
+        /*
+                       - flex-grow: 1 -> Puede crecer
+                       - flex-shrink: 1 -> Puede encogerse
+                       - flex-basis: 250px -> Tamaño inicial de 250px
+                     */
+
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #fafafa;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        /* --- Estilos del contenido de la tarjeta --- */
+        h3 {
+            color: #0056b3;
+            margin-top: 0;
+        }
+
+        p {
+            /* El párrafo crecerá para ocupar el espacio vertical disponible,
+       empujando el botón hacia abajo. */
+            flex-grow: 1;
+            color: #555;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: auto;
+            /* Se asegura de que se alinee al final si hay espacio */
+        }
+
+        /* --- Modificaciones para la tarjeta destacada --- */
+        &.destacada {
+            background-color: #ffc107;
+            border-color: #e0a800;
+
+            /* Esta tarjeta crecerá el doble que las demás cuando haya espacio extra */
+            flex-grow: 2;
+            /* Para comprobarlo modifica el ancho del navegador */
+
+            /* Cambia la alineación interna de sus hijos (eje cruzado) */
+            align-items: center;
+
+            /* Centra el contenido horizontalmente */
+            h3 {
+                color: #333;
+            }
+
+            button {
+                background-color: #dc3545;
+            }
+        }
+    }
+}

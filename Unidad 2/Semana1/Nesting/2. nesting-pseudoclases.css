@@ -1,0 +1,18 @@
+main {
+    .mi-boton {
+        background-color: #3498db;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        /*Aquí, & representa .mi-boton.
+        * Por lo tanto, &:hover es equivalente a .mi-boton:hover
+        */
+        &:hover { /* main .mi-boton:hover */
+            background-color: #2980b9;
+        }
+    }
+}

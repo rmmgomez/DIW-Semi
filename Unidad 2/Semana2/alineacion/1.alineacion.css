@@ -1,0 +1,128 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    padding: 20px;
+}
+
+.grid-container {
+    width: 100%;
+    height: 700px;
+    /* Le damos altura para ver align-content */
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+
+    .item {
+        color: white;
+        padding: 20px;
+        border-radius: 12px;
+        font-size: 1.2em;
+        font-weight: 600;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        p {
+            margin: 0;
+            font-size: 0.7em;
+            font-weight: 400;
+            opacity: 0.8;
+        }
+    }
+
+    .item-1 {
+        background: linear-gradient(45deg, #ff6b6b, #f06595);
+    }
+
+    .item-2 {
+        background: linear-gradient(45deg, #74c0fc, #a5d8ff);
+    }
+
+    .item-3 {
+        background: linear-gradient(45deg, #51cf66, #96f250);
+    }
+
+    .item-4 {
+        background: linear-gradient(45deg, #fcc419, #ffd43b);
+    }
+
+    .item-5 {
+        background: linear-gradient(45deg, #cc5de8, #be4bdb);
+    }
+
+    .item-6 {
+        background: linear-gradient(45deg, #495057, #868e96);
+    }
+}
+
+
+
+/* --- 
+        PROPIEDADES GRID, 
+        LAS SEPARO PARA TENERLAS TODAS JUNTAS Y NO MEZCLAR CON LAS OTRAS
+        Consejo: Probad las propiedades viendo el grid en en navegador
+   --- 
+*/
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 150px);
+    gap: 25px;
+    /* 1. Espaciado entre celdas */
+    justify-content: center;
+    /* Centra el bloque de celdas horizontalmente */
+    align-content: center;
+    /* Centra el bloque de celdas verticalmente */
+    /* Atajo: place-content: center center; */
+
+    justify-items: start;
+    /* Pega los hijos a la izquierda de su celda */
+    align-items: start;
+    /* Pega los hijos arriba de su celda */
+    /* Atajo: place-items: start start; */
+
+
+    /* --- PROPIEDADES DE LOS HIJOS (ITEMS) --- */
+    
+    .item-2 {
+        grid-column: span 2; /* Item 2: Ocupa 2 columnas y se centra horizontalmente */
+        justify-self: stretch; /* Sobrescribe justify-items y se estira */        
+        p {
+            color: #1864ab;
+        }
+    }
+
+    
+    .item-3 {
+        align-self: end; /* Item 3: Se alinea al final (abajo) de su celda */
+        /* Sobrescribe align-items y baja */
+        p {
+            color: #2b8a3e;
+        }
+    }
+
+    
+    .item-4 {
+        grid-row: span 2; /* Item 4: Ocupa 2 filas y se centra */
+        justify-self: center; /* Sobrescribe justify-items */        
+        align-self: center; /* Sobrescribe align-items */
+        /* Atajo: place-self: center; */
+                
+        p {
+            color: #e67700;
+        }
+    }
+
+    
+    .item-5 {
+        align-self: stretch; /* Item 5: Se estira verticalmente para ocupar toda la altura de su celda */
+        /* Sobrescribe align-items y se estira verticalmente */
+        p {
+            color: #862e9c;
+        }
+    }
+}

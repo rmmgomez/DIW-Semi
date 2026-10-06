@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio Flexbox - Items</title>
+    <link rel="stylesheet" href="5. flex.css">
+</head>
+<body>
+
+    <h1>Laboratorio Flexbox 🔬 - Propiedades de los Items</h1>
+
+    <div class="container-wrapper">
+        <h2>Escenario 1: Crecimiento (grow) y Encogimiento (shrink)</h2>
+        <p>El contenedor es ancho, dejando espacio libre. Los items con <code>flex-grow</code> mayor que 0 se lo repartirán. Si haces la ventana más estrecha, los items con <code>flex-shrink</code> mayor que 0 cederán su espacio.</p>
+        <div id="container-grow-shrink" class="flex-container">
+            <div class="flex-item item-1">1</div>
+            <div class="flex-item item-2">2</div>
+            <div class="flex-item item-3">3</div>
+            <div class="flex-item item-4">4</div>
+        </div>
+    </div>
+    
+    <div class="container-wrapper">
+        <h2>Escenario 2: Orden (order) y Auto-alineación (align-self)</h2>
+        <p>La propiedad <code>order</code> cambia el orden visual sin tocar el HTML. La propiedad <code>align-self</code> permite a un item ignorar la alineación general (<code>align-items</code>) del contenedor.</p>
+        <div id="container-order-align" class="flex-container">
+            <div class="flex-item item-1">1</div>
+            <div class="flex-item item-2">2</div>
+            <div class="flex-item item-3">3</div>
+            <div class="flex-item item-4">4</div>
+            <div class="flex-item item-5">5</div>
+        </div>
+    </div>
+
+    <div class="container-wrapper">
+        <h2>Escenario 3: El atajo 'flex'</h2>
+        <p>La propiedad <code>flex</code> es la forma más común de definir la flexibilidad de un item, combinando <code>flex-grow</code>, <code>flex-shrink</code> y <code>flex-basis</code>.</p>
+        <div id="container-shorthand" class="flex-container">
+            <div class="flex-item item-1">1</div>
+            <div class="flex-item item-2">2</div>
+            <div class="flex-item item-3">3</div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.miGrid {
+    gap: 20px;
+    /* Separación de cada celda del grid */
+    width: 100%;
+    max-width: 1200px;
+    height: 100vh;
+    display: grid;
+    /* Grid de 4 columnas y 3 filas */
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px 1fr 100px 100px;
+    height: 100vh;
+
+    .item {
+        /* Estilos comunes a todas las celdas */
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        padding: 20px;
+        color: white;
+        font-size: 1.2rem;
+        text-align: center;
+        place-content: center;
+    }
+
+    .header {
+        background-color: #4a90e2;
+        /* Forma Abreviada: Empieza en la línea 1 y termina en la última (-1) */
+        grid-column: 1 / -1;
+        /* Podríamos haber usado también estas dos opciones: 
+            grid-column: 1 / 5;
+
+            grid-column-start: 1;
+            grid-column-end: 5;
+        */
+    }
+
+    .aside {
+        background-color: #34495e;
+        color: white;
+        /* Forma Larga: Ocupa la primera columna y se expande desde la fila 2 a la 4 */
+        grid-column-start: 1;
+        grid-column-end: 2;
+        /* Forma corta: grid-column: 1 /2;  */
+        
+        grid-row-start: 2;
+        grid-row-end: 4;
+        /* Forma corta: grid-row: 2 / 4;  */        
+        /* Podríamos usar 'span 2' aquí también ( 2 / span 2)*/
+    }
+
+    .main-content {
+        background-color: #f5a623;
+        /* Forma Abreviada con 'span': Empieza en la columna 2 y ocupa 3 columnas */
+        grid-column: 2 / span 3;
+    }
+
+    .card-1 {
+        background-color: #50e3c2;
+        /* Ocupa el espacio de la segunda columna, en la tercera fila */
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+    }
+
+    .card-2 {
+        background-color: #bd10e0;
+        /* Empieza en la columna 3 y ocupa las 2 columnas restantes */
+        grid-column: 3 / span 2;
+    }
+
+    .footer {
+        background-color: #4a4a4a;
+        grid-column: 1 / 5;
+    }
+}

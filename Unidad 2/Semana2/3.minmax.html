@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Flexible con Grid y minmax()</title>
+    <link rel="stylesheet" href="3.minmax.css">
+</head>
+
+<body>
+
+    <div class="layout-container">
+
+        <aside class="sidebar">
+            <h2>Navegación</h2>
+            <ul>
+                <li>Inicio</li>
+                <li>Perfil</li>
+                <li>Mensajes</li>
+                <li>Estadísticas</li>
+                <li>Ajustes</li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <h1>Contenido Principal</h1>
+            <p>Este área de contenido principal se adapta al espacio sobrante. El sidebar a la izquierda es flexible,
+                pero nunca se encogerá más allá de los 200px gracias a la función <code>minmax()</code> de CSS Grid.</p>
+            <p>Prueba a redimensionar la ventana de tu navegador para ver el efecto. Notarás que el sidebar se encoge
+                hasta llegar a su límite, momento en el cual el navegador activará una barra de scroll horizontal si el
+                espacio total es menor, protegiendo así el diseño.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.</p>
+        </main>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+h1,
+p {
+    text-align: center;
+}
+
+hr {
+    margin: 40px 0;
+    border: 1px solid #ccc;
+}
+
+/* Contenedor principal del grid */
+.grid-container {
+    display: grid;
+    gap: 1rem;
+    /* Espacio entre los elementos */
+    padding: 1rem;
+    border: 2px solid #333;
+    background-color: #fff;
+
+    /* Estilos para los items del grid (usando anidación) */
+    .item {
+        background-color: #007bff;
+        color: white;
+        padding: 2rem;
+        text-align: center;
+        font-size: 1.5rem;
+        border-radius: 5px;
+    }
+
+    /* --- Ejemplo 1: Usando auto-fill --- */
+    /*
+    'auto-fill' crea tantas columnas como quepan.
+    Si hay espacio extra, lo deja vacío, listo para llenarlo con más columnas.
+  */
+    &.auto-fill-example {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    /* --- Ejemplo 2: Usando auto-fit --- */
+    /*
+    'auto-fit' también crea tantas columnas como quepan,
+    PERO si hay espacio extra, colapsa las pistas vacías y estira
+    las existentes para que ocupen todo el ancho.
+  */
+    &.auto-fit-example {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    border: 2px solid #333;
+    background-color: #fff;
+
+    .item {
+        flex: 1 1 100px;
+        background-color: red;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-size: 24px;
+    }
+}

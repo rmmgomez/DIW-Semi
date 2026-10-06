@@ -1,0 +1,77 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+/* El Contenedor Padre de Flexbox */
+.flex-toolbar {
+  display: flex; /* 1. Activa Flexbox */
+  background-color: #3498db;
+  padding: 15px;
+  min-height: 120px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  
+  /* 1. gap: Propiedad del Padre. Añade un espacio uniforme entre los ítems */
+  gap: 15px; 
+  
+  /* justify-content y align-items para centrado básico */
+  justify-content: flex-start;
+  align-items: center;
+  
+  /* Estilos y Propiedades de los Hijos */
+  .item {
+    /* Estilos base de los ítems */
+    padding: 15px 20px;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.3s;
+    font-weight: bold;
+    border: 2px solid #2980b9;
+    
+    /* Propiedades Flex (Valores por defecto para empezar) */
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+  }
+  
+  /* Item A: Base */
+  .item-A {
+    /* flex-basis: Define el tamaño inicial del ítem antes de crecer o encogerse. */
+    flex-basis: 150px;
+  }
+  
+  /* Item B: Crece */
+  .item-B {
+    background-color: #e74c3c;
+    color: white;
+    /* flex-grow: Define la proporción de espacio libre que debe tomar el ítem. */
+    flex-grow: 3;
+    flex-basis: 50px; /* Tamaño base muy pequeño, permitiendo más crecimiento. */
+  }
+  
+  /* Item C: Reordenado y Alineación personalizada */
+  .item-C {
+    background-color: #f1c40f;
+    /* order: Define el orden de aparición. Valores más bajos van primero. */
+    order: -1;
+    
+    /* align-self: Sobreescribe align-items del padre para este ítem. */
+    align-self: flex-start;
+  }
+  
+  /* Item D: Encogimiento forzado y Alineación personalizada */
+  .item-D {
+    background-color: #27ae60;
+    color: white;
+    /* order: Mover este ítem al final. */
+    order: 99;
+    
+    /* align-self: Sobreescribe align-items del padre para este ítem. */
+    align-self: flex-end;          
+  }
+}

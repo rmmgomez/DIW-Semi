@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de auto-fill vs. auto-fit</title>
+    <link rel="stylesheet" href="2.repeat.css">
+</head>
+
+<body>
+
+    <h1>Ejemplo con <code>auto-fill</code></h1>
+    <p>Con <code>auto-fill</code>, el espacio vacío se reserva para nuevas columnas si el contenedor crece. Observa el
+        espacio en blanco al final si la ventana es ancha.</p>
+    <div class="grid-container auto-fill-example">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+
+    <hr>
+
+    <h1>Ejemplo con <code>auto-fit</code></h1>
+    <p>Con <code>auto-fit</code>, las columnas existentes se estiran para ocupar el espacio disponible. No deja huecos.
+    </p>
+    <div class="grid-container auto-fit-example">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+
+    <h1>Ejemplo con <code>flex y flex grow</code></h1>
+    <div class="flex-container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+
+</body>
+
+</html>

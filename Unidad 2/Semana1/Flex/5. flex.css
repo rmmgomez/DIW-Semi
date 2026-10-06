@@ -1,0 +1,167 @@
+/* --- ESTILOS BÁSICOS (NO ES NECESARIO TOCAR AQUÍ) --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #1d3557;
+    padding: 1rem;
+}
+
+.info,
+h1,
+h2 {
+    text-align: center;
+}
+
+.container-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+
+    .flex-container {
+        display: flex;
+        min-height: 150px;
+        padding: 1rem;
+        border: 3px dashed #a8dadc;
+        border-radius: 8px;
+
+        .flex-item {
+            min-width: 80px;
+            min-height: 80px;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            border-radius: 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &.item-1 {
+                background-color: #e63946;
+            }
+
+            &.item-2 {
+                background-color: #f1faee;
+                color: #1d3557;
+            }
+
+            &.item-3 {
+                background-color: #a8dadc;
+                color: #1d3557;
+            }
+
+            &.item-4 {
+                background-color: #457b9d;
+            }
+
+            &.item-5 {
+                background-color: #1d3557;
+            }
+        }
+
+    }
+}
+
+
+
+
+
+
+/* --- Saco los estilos de los items para ver cómo se comportan fuera para que veáis cómo funciona --- */
+
+
+/* items =================================================================== */
+/* ▼▼▼ ¡AQUÍ EMPIEZA LA MAGIA! MODIFICA ESTOS VALORES ▼▼▼ */
+/* ========================================================================== */
+
+/* ESCENARIO 1: 'flex-grow' y 'flex-shrink'
+           Usamos un tamaño base (flex-basis) para ver cómo crecen o se encogen. */
+#container-grow-shrink .flex-item {
+    flex-basis: 120px;
+    /* Tamaño inicial de cada item */
+}
+
+/* El item 2 crecerá el doble que el 4 cuando haya espacio extra. */
+#container-grow-shrink .item-2 {
+    flex-grow: 2;
+}
+
+/* El item 4 también crecerá, pero menos. */
+#container-grow-shrink .item-4 {
+    flex-grow: 1;
+}
+
+/* El item 1 se negará a encogerse si falta espacio. */
+#container-grow-shrink .item-1 {
+    flex-shrink: 0;
+}
+
+/* El item 3 se encogerá el doble que el resto. */
+#container-grow-shrink .item-3 {
+    flex-shrink: 2;
+}
+
+
+/* ========================================================================== */
+
+/* ESCENARIO 2: 'order' y 'align-self' */
+#container-order-align {
+    height: 250px;
+    /* Alineación general del contenedor: todos al centro */
+    align-items: center;
+}
+
+/* El item 3 irá primero porque -1 es menor que 0 (el valor por defecto) */
+#container-order-align .item-3 {
+    order: -1;
+    /* Prueba a cambiarlo a 1 para ver cómo se va después del 2,
+               o a 3 para enviarlo al final. */
+}
+
+/* El item 5 irá al final de todos los que tienen order: 0 */
+#container-order-align .item-5 {
+    order: 1;
+}
+
+/* El item 1 "desobedece" la alineación central y se va para arriba */
+#container-order-align .item-1 {
+    align-self: flex-start;
+}
+
+/* El item 4 también "desobedece" y se va para abajo */
+#container-order-align .item-4 {
+    align-self: flex-end;
+}
+
+/* El item 2 usará la propiedad 'stretch' para ocupar todo el alto. */
+#container-order-align .item-2 {
+    align-self: stretch;
+    height: auto;
+    /* Quitamos la altura fija para que stretch funcione */
+}
+
+
+/* ========================================================================== */
+
+/* ESCENARIO 3: Shorthand 'flex' */
+
+/* La propiedad 'flex' combina grow, shrink y basis en una sola línea.
+           flex: <flex-grow> <flex-shrink> <flex-basis>; */
+
+/* El item 1: no crece, no se encoge, tamaño fijo de 200px. Es rígido. */
+#container-shorthand .item-1 {
+    flex: 0 0 200px;
+}
+
+/* El item 2: crece (1), se encoge (1), parte de un tamaño base de 100px. Es flexible. */
+#container-shorthand .item-2 {
+    flex: 1 1 100px;
+}
+
+/* El item 3: no crece, pero sí se encoge, parte de un tamaño base de 250px. */
+#container-shorthand .item-3 {
+    flex: 0 1 250px;
+}

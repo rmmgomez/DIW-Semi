@@ -1,0 +1,27 @@
+.perfil {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+
+    img {
+        margin-right: 15px;
+    }
+
+    /*
+   * En pantallas de 600px o menos, cambiamos la disposición.
+   * El & interior hace referencia al selector padre .perfil,
+   * manteniendo el contexto.
+   */
+    @media (max-width: 600px) {
+        & {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        & img {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+    }
+}
