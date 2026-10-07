@@ -1,0 +1,17 @@
+div{ /* Especificidad: 0, 0, 0, 1 */
+    color: red;
+    padding: 8px;
+}
+#mensaje{ /* Especificidad: 0, 1, 0, 0 */
+    color: orange;
+}
+div#mensaje{ /* Especificidad: 0, 1, 0, 1 */
+    color: blue;
+}
+div#mensaje:hover{ /* Especificidad: 0, 1, 1, 1 */
+    color: pink;
+}
+div.error:hover::before{ /* Especificidad: 0, 0, 2, 2 */
+    color: green;
+    content:'🍕';
+}

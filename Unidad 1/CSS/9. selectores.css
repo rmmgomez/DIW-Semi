@@ -6,11 +6,12 @@
     padding: 5px;
 }
 
+
 /* 2. SELECTOR DESCENDIENTE (espacio) */
 /* Selecciona TODOS los párrafos <p> que estén DENTRO */
 /* de main, sin importar a qué nivel. */
 main p {
-    background-color: #e0f7fa;
+    background-color: violet;
 }
 
 /* 3. SELECTOR DE HIJO DIRECTO (>) */
