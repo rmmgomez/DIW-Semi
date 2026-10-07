@@ -1,0 +1,63 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    gap: 20px;
+    /* Separación de cada celda del grid */
+    width: 100%;
+    max-width: 1200px;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-areas:
+        "header header header header"
+        "aside main main main"
+        "aside card-1 card-2 card-2"
+        "footer footer footer footer";
+
+    .item {
+        /* Estilos comunes a todas las celdas */
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        padding: 20px;
+        color: white;
+        font-size: 1.2rem;
+        text-align: center;
+        place-content: center;
+    }
+
+    .header {
+        background-color: #4a90e2;
+        grid-area: header;
+    }
+
+    .aside {
+        background-color: #34495e;
+        grid-area: aside;
+    }
+
+    .main-content {
+        background-color: #f5a623;
+        grid-area: main;
+    }
+
+    .card-1 {
+        background-color: #50e3c2;
+        grid-area: card-1;
+    }
+
+    .card-2 {
+        background-color: #bd10e0;
+        grid-area: card-2;
+    }
+
+    .footer {
+        background-color: #4a4a4a;
+        grid-area: footer;
+    }
+}

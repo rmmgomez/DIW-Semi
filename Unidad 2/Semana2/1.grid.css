@@ -1,0 +1,39 @@
+.container {
+    /* 1. Convertimos el div en un contenedor de Grid */
+    display: grid;
+
+    /* 2. Definimos las columnas */
+    /* Esto crea 3 columnas, cada una ocupa una fracción del espacio disponible. */
+    grid-template-columns: 1fr 1fr 1fr;
+
+    /* También podríamos usar: grid-template-columns: repeat(3, 1fr); */
+    /* O con píxeles: grid-template-columns: 200px 200px 200px; */
+
+    /* 3. Definimos el espacio entre las celdas */
+    gap: 10px;
+
+    /* 10px de espacio tanto para filas como para columnas */
+    /* Estilos básicos para que se vea bien */
+    .item {
+        background-color: #007bff;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-size: 24px;
+    }
+}
+
+.container2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    .item {
+        flex: 1 1 100px;
+        background-color: red;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-size: 24px;
+    }
+}

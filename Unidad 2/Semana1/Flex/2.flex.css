@@ -1,0 +1,65 @@
+/* Estilos generales (Reset básico y centrado para la demostración) */
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f7f6;
+  font-family: Arial, sans-serif;
+}
+
+/* El Contenedor Padre de Flexbox */
+main {
+  /* 1. Definir como contenedor Flex */
+  display: flex;
+  /* 2. flex-direction: Define el eje principal (columna) y lo invierte */
+  flex-direction: column-reverse;
+  /* 3. flex-wrap: Permite que los ítems salten de línea (apilamiento) */
+  flex-wrap: wrap;
+  /* flex-flow:column-reverse wrap; */
+  /* 4. justify-content: Alinea los ítems en el Eje Principal (verticalmente) */
+  justify-content: center;
+
+  /* 5. align-items: Alinea los ítems en el Eje Transversal (horizontalmente) */
+  align-items: center;
+
+  /* Estilos visuales del contenedor */
+  width: 90vw;
+  /* Ocupa el 90% del ancho de la vista */
+  height: 90vh;
+  /* Ocupa el 90% del alto de la vista */
+  padding: 10px;
+  background-color: #34495e;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+
+  /* Estilos para los elementos hijos */
+  .flex-item {
+    /* Estilos visuales de los ítems */
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+    /* Centrar contenido dentro del ítem (mini-flexbox) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.item8 {
+      /* .flex-item.item8 */
+      order: -1;
+      align-self: flex-end;
+    }
+
+    &.item1 {
+      order: 99;
+    }
+  }
+}

@@ -1,0 +1,75 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    gap: 20px;
+    /* Separación de cada celda del grid */
+    width: 100%;
+    max-width: 1200px;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, [col-start] 1fr [col-end]);
+    grid-template-rows: [header]100px [main]1fr [footer]100px;
+
+    .item {
+        /* Estilos comunes a todas las celdas */
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        padding: 20px;
+        color: #333;
+        font-size: 1.2rem;
+        color: white;
+        place-content: center;
+        text-align: center;
+    }
+
+    .header {
+        background-color: #4a90e2;
+        grid-column: col-start 1 / col-end 4;
+        grid-row: header;
+    }
+
+    .aside {
+        background-color: #34495e;
+        grid-column: col-start 1 / col-end 1;
+        grid-row: main;
+    }
+
+    .main-content {
+        grid-column: col-end 1 / col-end 4;
+        grid-row: main;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: [section1-start]1fr [section1-end section2-start]2fr [section2-end];
+        grid-template-rows: [principal]3fr [section]1fr;
+
+
+        .article {
+            background-color: #f5a623;
+            grid-column: section1-start / section2-end;
+            grid-row: principal;
+        }
+
+        .card-1 {
+            background-color: #50e3c2;
+            grid-column: section1-start /section1-end;
+            grid-row: section;
+        }
+
+        .card-2 {
+            background-color: #bd10e0;
+            grid-column: section2-start / section2-end;
+            grid-row: section;
+        }
+    }
+
+    .footer {
+        background-color: #4a4a4a;
+        grid-column: col-start 1 / col-end 4;
+        grid-row: footer;
+    }
+}

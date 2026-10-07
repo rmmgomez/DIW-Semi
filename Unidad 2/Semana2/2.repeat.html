@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de auto-fill vs. auto-fit</title>
+    <link rel="stylesheet" href="2.repeat.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Ejemplos de Grid y Flexbox</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Ejemplo con <code>auto-fill</code></h2>
+            <p>Con <code>auto-fill</code>, el espacio vacío se reserva para nuevas columnas si el contenedor crece.
+                Observa el espacio en blanco al final si la ventana es ancha.</p>
+            <div class="grid-container auto-fill-example">
+                <article class="item">1</article>
+                <article class="item">2</article>
+                <article class="item">3</article>
+                <article class="item">4</article>
+                <article class="item">5</article>
+                <article class="item">6</article>
+            </div>
+        </section>
+
+        <section>
+            <h2>Ejemplo con <code>auto-fit</code></h2>
+            <p>Con <code>auto-fit</code>, las columnas existentes se estiran para ocupar el espacio disponible. No deja
+                huecos.</p>
+            <div class="grid-container auto-fit-example">
+                <article class="item">1</article>
+                <article class="item">2</article>
+                <article class="item">3</article>
+                <article class="item">4</article>
+                <article class="item">5</article>
+                <article class="item">6</article>
+            </div>
+        </section>
+
+        <section>
+            <h2>Ejemplo con <code>flex</code> y <code>flex-grow</code></h2>
+            <div class="flex-container">
+                <article class="item">1</article>
+                <article class="item">2</article>
+                <article class="item">3</article>
+                <article class="item">4</article>
+                <article class="item">5</article>
+                <article class="item">6</article>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>

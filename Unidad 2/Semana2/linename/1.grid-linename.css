@@ -1,0 +1,66 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    gap: 20px;
+    /* Separación de cada celda del grid */
+    width: 100%;
+    max-width: 1200px;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: [aside-start]1fr [aside-end card1-start]1fr [card1-end]1fr [card2-start card2-mid]1fr [card2-mid2 card2-end];
+    grid-template-rows: [header]100px [main]3fr [card]1fr [footer]100px;
+
+    .item {
+        /* Estilos comunes a todas las celdas */
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        padding: 20px;
+        color: white;
+        font-size: 1.2rem;
+        text-align: center;
+        place-content: center;
+    }
+
+    .header {
+        background-color: #4a90e2;
+
+        /* Forma Abreviada: Empieza en la línea 1 y termina en la última (-1) */
+        grid-column: aside-start / card2-end;
+        grid-row: header;
+    }
+
+    .aside {
+        background-color: #34495e;
+        grid-column: aside-start / aside-end;
+        grid-row: main / footer;
+    }
+
+    .main-content {
+        background-color: #f5a623;
+        grid-column: aside-end / card2-end;
+        grid-row: main;
+    }
+
+    .card-1 {
+        background-color: #50e3c2;
+        grid-column: aside-end / card1-end;
+        grid-row: card;
+    }
+
+    .card-2 {
+        background-color: #bd10e0;
+        grid-column: card1-end / card2-end;
+        grid-row: card;
+    }
+
+    .footer {
+        background-color: #4a4a4a;
+        grid-column: aside-start / card2-end;
+        grid-row: footer;
+    }
+}

@@ -1,0 +1,22 @@
+.articulo {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+
+    p {
+        color: #333;
+    }
+
+    /* '&' se convierte en '.articulo'
+     La regla final es: .modo-oscuro .articulo
+     Esto aplica el estilo al artículo SÓLO SI está dentro de .modo-oscuro */
+    .modo-oscuro & {
+        background-color: #333;
+        border-color: #555;
+
+        p {
+            color: #f0f0f0;
+        }
+    }
+}

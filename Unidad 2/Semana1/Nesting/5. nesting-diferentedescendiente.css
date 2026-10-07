@@ -1,0 +1,13 @@
+.card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  border-radius: 8px;
+
+  /* '&' se convierte en '.card'
+     La regla final es: .card > p */
+  &>p {
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+  }
+}
