@@ -6,14 +6,16 @@
         padding-left: 20px;
         margin-bottom: 8px;
         position: relative;
+
+        &::before {
+            content: '☠';
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
     }
 
     /* '&' se convierte en 'li' (el padre anidado)
      La regla final es: .lista-custom li::before */
-    & li::before {
-        content: '☠';
-        position: absolute;
-        left: 0;
-        top: 0;
-    }
+
 }

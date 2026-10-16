@@ -1,0 +1,7 @@
+li:has(input:checked) {
+    background-color: lightgreen;
+}
+
+li:has(input:not(:checked)) {
+    color: red;
+}

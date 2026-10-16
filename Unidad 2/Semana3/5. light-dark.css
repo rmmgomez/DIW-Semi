@@ -1,0 +1,149 @@
+/* --- Configuración inicial para que el navegador sepa que la página soporta temas --- */
+:root {
+    color-scheme: light dark;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    margin: 0;
+
+    /* Usamos light-dark() para el fondo del body */
+    background-color: light-dark(#eef2f5, #121826);
+    transition: background-color 0.3s ease;
+}
+
+.profile-card {
+    width: 340px;
+    border-radius: 20px;
+    overflow: hidden;
+
+    /* Colores para la tarjeta y la sombra con light-dark() */
+    background-color: light-dark(white, #1e293b);
+    color: light-dark(#334155, #cbd5e1);
+    box-shadow: 0 10px 30px light-dark(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
+
+    border: 1px solid light-dark(#e2e8f0, #334155);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+
+    .profile-header {
+        height: 120px;
+        background: linear-gradient(135deg, #6366f1, #a855f7);
+        position: relative;
+
+        img {
+            position: absolute;
+            bottom: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+
+            /* Borde de la imagen que se adapta al tema */
+            border: 5px solid light-dark(white, #1e293b);
+        }
+    }
+
+    .profile-body {
+        padding: 80px 2rem 2rem;
+        text-align: center;
+
+        h2 {
+            margin: 0;
+            font-size: 1.75rem;
+
+            /* Color del título */
+            color: light-dark(#1e293b, white);
+        }
+
+        .job-title {
+            color: #a855f7;
+            font-weight: 600;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 1.5rem 0;
+            padding: 1rem 0;
+
+            /* Borde superior que cambia de color */
+            border-top: 1px solid light-dark(#e2e8f0, #334155);
+
+            strong {
+                display: block;
+                font-size: 1.25rem;
+
+                /* Color de los números de las estadísticas */
+                color: light-dark(#1e293b, white);
+            }
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: linear-gradient(135deg, #6366f1, #a855f7);
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+            &:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 20px rgba(168, 85, 247, 0.3);
+            }
+        }
+    }
+}
+
+/* 
+Lo correcto sería las preferencias ponerlas junto con los estilos,
+Pero las dejamos separadas para que os resulte más fácil entender su funcionamiento
+En las siguientes prácticas las veremos con nesting.
+*/
+
+/* 1. Preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+
+    .btn-primary:hover {
+        transform: none;
+        box-shadow: 0 8px 20px rgba(168, 85, 247, 0.3);
+    }
+}
+
+/* 2. Preferencia de transparencia reducida */
+@media (prefers-reduced-transparency: reduce) {
+    .profile-card {
+        box-shadow: 0 10px 30px light-dark(rgb(180, 180, 180), rgb(0, 0, 0));
+    }
+
+    .btn-primary:hover {
+        box-shadow: 0 8px 20px rgb(191, 137, 248);
+    }
+}
+
+/* 3. Preferencia de contraste aumentado (con colores personalizados) */
+@media (prefers-contrast: more) {
+    .profile-card {
+        /* Aumentamos el grosor del borde */
+        border-width: 2px;
+        /* Usamos negro/blanco puros para el máximo contraste */
+        border-color: light-dark(#000, #fff);
+    }
+
+    .profile-body h2,
+    .stats strong {
+        /* El texto más importante también usa negro/blanco puros */
+        color: light-dark(#000, #fff);
+    }
+}

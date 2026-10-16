@@ -31,7 +31,8 @@ body {
     .header {
         background-color: #4a90e2;
         /* Forma Abreviada: Empieza en la línea 1 y termina en la última (-1) */
-        grid-column: 1 / -1;
+        grid-column: 1/5;
+        grid-row: 1/2
         /* Podríamos haber usado también estas dos opciones: 
             grid-column: 1 / 5;
 

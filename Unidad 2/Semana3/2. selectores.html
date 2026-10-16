@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0; ">
+    <title>Ejemplo de Selectores CSS</title>
+    <link rel="stylesheet" href="2.selectores.css">
+</head>
+<body>
+    <main>
+        <article class="card featured">
+            <h2>Artículo Destacado</h2>
+            <p>Este artículo es especial y tiene un estilo diferente. No tendrá el borde inferior que tienen los demás.</p>
+            <footer>
+                <a href="#">Leer más...</a>
+            </footer>
+        </article>
+
+        <article class="card">
+            <h2>Artículo con Imagen</h2>
+            <p>Este artículo cambia su diseño porque contiene una imagen. El selector <code>:has()</code> lo detecta y aplica estilos al contenedor <code>article</code>.</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXZ6Vw-Br-RRvMstTlTqbeGXw4PNepXRrTzg&s" alt="Imagen de ejemplo">
+        </article>
+        
+        <article class="card">
+            <h2>Otro Artículo Normal</h2>
+            <p>Este es un artículo estándar, con estilos base. Tiene un borde inferior gracias a la regla con <code>:not()</code>.</p>
+        </article>
+
+        <div class="contact-form">
+            <h3>Formulario de Contacto</h3>
+            <form>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Reset">
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>
