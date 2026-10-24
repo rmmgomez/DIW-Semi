@@ -1,0 +1,114 @@
+/* Establecemos el tamaño de fuente raíz en 10px para que los cálculos de 'rem' sean muy fáciles.
+       1rem = 10px, 1.5rem = 15px, etc.
+       Por defecto, los navegadores usan 16px. */
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: sans-serif;
+    color: #333;
+    padding: 20px;
+}
+
+.container {
+    border: 2px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+
+    h2 {
+        margin-top: 0;
+    }
+
+}
+
+
+/* --- 1. EJEMPLO CON 'rem' (Root EM) --- */
+/* 'rem' es relativo al tamaño de fuente de la etiqueta <html>. */
+
+.rem-example {
+    background-color: #e0f7fa;
+
+    h2 {
+        /* 2.4rem = 2.4 * 10px (de <html>) = 24px */
+        font-size: 2.4rem;
+        border-bottom: 2px solid #00796b;
+    }
+
+    p {
+        /* 1.6rem = 1.6 * 10px (de <html>) = 16px */
+        font-size: 1.6rem;
+        /* 1rem = 1 * 10px (de <html>) = 10px */
+        margin-bottom: 1rem;
+    }
+}
+
+
+
+
+/* --- 2. EJEMPLO CON 'em' --- */
+/* 'em' es relativo al tamaño de fuente del elemento PADRE. */
+
+.em-example {
+    background-color: #fffde7;
+    /* Establecemos un tamaño de fuente específico para este contenedor.
+         Ahora, cualquier 'em' dentro de él se basará en 20px. */
+    font-size: 20px;
+
+    h2 {
+        /* 1.5em = 1.5 * 20px (del padre .em-example) = 30px */
+        font-size: 1.5em;
+        border-bottom: 2px solid #fbc02d;
+    }
+
+    .child-box {
+        /* 0.8em = 0.8 * 20px (del padre .em-example) = 16px */
+        font-size: 0.8em;
+        /* 1em = 1 * 20px (del padre .em-example) = 20px de padding */
+        padding: 1em;
+        background-color: #f1f8e9;
+        border: 1px solid #7cb342;
+    }
+}
+
+
+
+
+/* --- 3. EJEMPLO CON '%' --- */
+/* '%' es relativo a la misma propiedad del elemento padre. */
+.percentage-example {
+    background-color: #f3e5f5;
+
+    .parent-width {
+        width: 100%;
+        /* Ocupa todo el ancho del body */
+        background-color: #e1bee7;
+        padding: 10px;
+    }
+
+    .child-width {
+        /* 50% del ancho del padre (.parent-width) */
+        width: 50%;
+        background-color: #ce93d8;
+        padding: 15px;
+        color: white;
+    }
+}
+
+
+
+
+/* --- 4. EJEMPLO CON 'ch' --- */
+/* 'ch' es relativo al ancho del carácter '0' de la fuente actual.
+       Es ideal para controlar la longitud de las líneas de texto para mejorar la legibilidad. */
+.ch-example {
+    background-color: #ffebee;
+    font-size: 16px;
+
+    p {
+        /* Limita el ancho del párrafo a 60 caracteres. */
+        max-width: 60ch;
+        border-left: 3px solid #e53935;
+        padding-left: 15px;
+    }
+}

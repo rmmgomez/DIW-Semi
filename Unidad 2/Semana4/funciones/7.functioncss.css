@@ -1,0 +1,26 @@
+@function --oscurecer(--value) {
+    result: color-mix(in srgb, var(--value), black 50%);
+}
+@function --suavizar(--value) {
+    result: color-mix(in srgb, var(--value), white 50%);
+}
+
+main {
+    min-width: 100px;
+    max-width: 500px;
+    padding: 20px;
+    background: red;
+    transition: background 1s;
+    border-radius: 15px;
+
+    &:hover {
+        background: --oscurecer(blue);
+        color: --suavizar(black);
+        @supports not (background: --oscurecer(blue)){
+            background-color: cadetblue;
+        }
+        @supports not (color: --suavizar(black)){
+            color: pink;
+        }
+    }
+}
