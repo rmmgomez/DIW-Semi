@@ -1,5 +1,11 @@
 @layer default, utilities;
 
+@layer utilities {
+  button{
+    background-color: red;
+  }
+}
+
 @layer default {
   button {
     background-color: blue;
@@ -11,11 +17,7 @@
   }
 }
 
-@layer utilities {
-  button{
-    background-color: red;
-  }
-}
+
 
 
 h1 {
