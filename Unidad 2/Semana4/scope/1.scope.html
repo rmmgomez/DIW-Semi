@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de @scope</title>
+  <link rel="stylesheet" href="1.scope.css">
+</head>
+<body>
+
+  <h1>Ejemplo de <code>@scope</code></h1>
+
+  <article class="card">
+    <h2 class="title">Este es el Título de la Tarjeta</h2>
+    <p>Este párrafo debe heredar los estilos de la tarjeta.</p>
+  </article>
+
+  <article class="card">
+    <h2 class="title">Este es el Título de la Tarjeta</h2>
+    <p>Este párrafo también.</p>
+
+    <div class="badge">
+      <h3 class="title">Título de la Insignia</h3>
+      <p>Este bloque es un componente separado y no debe ser afectado por los estilos de .card .</p>
+    </div>
+  </article>
+
+</body>
+</html>

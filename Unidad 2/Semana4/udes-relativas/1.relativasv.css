@@ -1,0 +1,66 @@
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    margin: 20px;
+}
+
+h2 {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+
+/* * EJEMPLO 1: UNIDADES DE VIEWPORT (vw/vh) */
+
+.box-viewport {
+    background-color: #007BFF;
+    padding: 20px;
+
+    /* * Este div tomará el 50% del ANCHO de la ventana (vw)
+    * y el 25% del ALTO de la ventana (vh).
+    */
+    width: 50vw;
+    height: 25vh;
+
+    font-size: 1.5vw; /* El texto también escala con la ventana */
+
+    box-sizing: border-box; /* Para incluir padding en el cálculo */
+    margin-bottom: 30px;
+}
+
+/* * EJEMPLO 2: UNIDADES DE CONTENEDOR (cqw) */
+
+/* (1) El Contenedor Padre */
+.container-padre { /* Le damos un tamaño fijo para ver el efecto */
+    width: 600px;
+    height: 300px;
+    background-color: #eee;
+    border: 2px solid #333;
+    padding: 10px;
+
+    /* * ¡ESTO ES LO MÁS IMPORTANTE!
+    * Activamos este elemento como un contenedor para consultas
+    * de tamaño en su eje horizontal (inline-size).
+    */
+    container-type: inline-size;
+    container-name: mi-contenedor; /* (Opcional) Le damos un nombre */
+    /* (2) El Elemento Hijo */
+    .box-container {
+        background-color: #28a745;
+        color: white;
+        padding: 20px;
+
+        /* * Este div tomará el 50% del ANCHO de su padre (cqw),
+        * es decir, el 50% de los 600px de .container-padre.
+        */
+        width: 50cqw;
+
+        /* Usamos 'cqh' si el padre tuviera 'container-type: size' o 'block-size' */
+        /* En este caso, lo dejamos en auto */
+        height: auto;
+
+        /* El texto también escala, pero según el contenedor */
+        font-size: 3cqw;
+
+        box-sizing: border-box;
+    }
+}

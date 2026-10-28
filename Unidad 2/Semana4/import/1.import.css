@@ -1,0 +1,29 @@
+@import url("print.css") print;
+@import url("mobile.css") screen and (max-width: 600px);
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    background-color: #004a99;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+
+    .no-imprimir {
+        background-color: #ddd;
+        padding: 15px;
+        border: 1px solid #ccc;
+    }
+}

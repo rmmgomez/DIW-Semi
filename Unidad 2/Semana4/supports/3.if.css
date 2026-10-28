@@ -1,0 +1,23 @@
+:root{
+    --textColor: black;
+}
+main {
+    background-color: yellow;
+    padding: 15px;
+    border: 1px solid #ccc;
+    color: var(--textColor);
+    /* Color de texto base: Gris Oscuro */
+    font-size: 1.1rem;
+    text-align: center;
+    border-radius: 5px;
+    /*
+        Si el navegador soporta 'if()', aplicamos la lógica:
+        Si el usuario está en modo oscuro (dark), el texto es blanco.
+        Si no está en modo oscuro (light), el texto es negro.
+        */
+    @supports(color: if( style(--textColor: white): black; else: pink)){
+        color: if( style(--textColor: white): black; else: pink);
+        background-color: if(media(prefers-color-scheme: dark): #222; else: white);
+        border-color: if(media(prefers-color-scheme: dark): white; else: black);
+    }
+}

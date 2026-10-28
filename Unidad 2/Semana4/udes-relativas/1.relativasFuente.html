@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Unidades Relativas a la Fuente</title>
+    <link rel="stylesheet" href="1.relativasFuente.css">
+</head>
+
+<body>
+    <main>
+    <h1>Demostración de Unidades Relativas a la Fuente</h1>
+
+    <article class="container rem-example">
+        <h2>Unidad <code>rem</code> (relativa a la raíz <code>&lt;html&gt;</code>)</h2>
+        <p>
+            El tamaño de fuente de este párrafo es <code>1.6rem</code>. Como la fuente de <code>&lt;html&gt;</code> es
+            de <code>10px</code>, este texto mide 16px. El título mide <code>2.4rem</code> (24px).
+        </p>
+    </article>
+
+    <article class="container em-example">
+        <h2>Unidad <code>em</code> (relativa al padre)</h2>
+        <p>
+            El contenedor padre tiene un <code>font-size</code> de <code>20px</code>. Este párrafo hereda ese tamaño. El
+            título, sin embargo, tiene <code>font-size: 1.5em</code>, lo que resulta en 1.5 * 20px = 30px.
+        </p>
+        <div class="child-box">
+            Esta caja hija tiene un <code>font-size</code> de <code>0.8em</code>, que se calcula sobre su padre
+            (.em-example), resultando en 0.8 * 20px = 16px. Su padding es de <code>1em</code>, lo que equivale a 1 *
+            16px = 16px (porque el padding se calcula sobre el font-size del PROPIO elemento).
+        </div>
+    </article>
+
+    <article class="container percentage-example">
+        <h2>Unidad <code>%</code> (Porcentaje)</h2>
+        <div class="parent-width">
+            Contenedor padre (ancho: 100%)
+            <div class="child-width">
+                Caja hija (ancho: 50% del padre)
+            </div>
+        </div>
+    </article>
+
+    <article class="container ch-example">
+        <h2>Unidad <code>ch</code> (relativa al ancho del carácter '0')</h2>
+        <p>
+            Este párrafo tiene un <code>max-width</code> de <code>60ch</code>. Esto significa que la línea no tendrá más
+            de 60 caracteres de ancho aproximadamente, lo cual es ideal para la legibilidad del texto largo, sin
+            importar el tamaño de la fuente. Prueba a cambiar el tamaño de la ventana y verás cómo se ajusta.
+        </p>
+    </article>
+</main>
+</body>
+
+</html>

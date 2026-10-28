@@ -1,0 +1,49 @@
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+}
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    border: 3px solid #ccc;
+    padding: 10px;
+
+    section {
+        padding: 20px;
+        background-color: #eee;
+        border: 1px solid #aaa;
+    }
+}
+
+@supports (display: grid) {
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        border-color: #007bff;
+
+        section {
+            float: none;
+            width: auto;
+            margin: 0;
+            background-color: #e6f7ff;
+            border-color: #007bff;
+        }
+    }
+    .info-browser::after {
+        content: "Soporta CSS Grid! 🥳";
+        color: green;
+    }
+}
+
+@supports not (display: grid) {
+    .info-browser::after {
+        content: "No soporta grid --> (float) 😢";
+        color: red;
+    }
+    /* Deberíamos dar una alternativa a cómo visualizar el contenido 
+    cuando no soporte grid */
+}
