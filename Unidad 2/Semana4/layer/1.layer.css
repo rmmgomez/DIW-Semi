@@ -1,21 +1,12 @@
 @layer default, utilities;
-
+@import url(default.css) layer(default);
 @layer utilities {
   button{
     background-color: red;
   }
 }
 
-@layer default {
-  button {
-    background-color: blue;
-    color: white;
-    font-size: 18px;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 5px;
-  }
-}
+
 
 
 

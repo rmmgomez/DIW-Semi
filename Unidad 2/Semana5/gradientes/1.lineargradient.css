@@ -1,0 +1,50 @@
+body {
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #333;
+}
+
+.contenedor-principal {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    min-height: 90vh;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    .columna {
+        flex-basis: 320px;
+        flex-grow: 1;
+        text-align: center;
+
+        h2 {
+            text-align: center;
+            color: #444;
+        }
+
+        p {
+            font-size: 0.9em;
+            padding: 0 10px;
+        }
+
+        .gradiente-lineal {
+            background: linear-gradient(135deg, #5ee7df, #b490ca);
+        }
+
+        .gradiente-repetido {
+            background: repeating-linear-gradient(45deg, #f9e04a, #f9e04a 20px, #444444 20px, #444444 40px);
+        }
+    }
+
+    .caja-demo {
+        width: 100%;
+        height: 300px;
+        border: 3px solid #333;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 15px;
+
+    }
+
+}

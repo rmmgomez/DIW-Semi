@@ -1,0 +1,90 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background-color: #e0f2f7;
+    padding: 30px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+
+    .box {
+        width: 150px;
+        height: 150px;
+        background-color: #4CAF50;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2em;
+        font-weight: bold;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        /* le decimos que ese transform tarde 0.4segundos
+        y que use la función "rápido-lento" */
+        transition: transform 0.4s ease-out;
+
+        p {
+            margin: 0;
+            padding: 5px;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+        }
+
+        /* --- Transform-Origin --- */
+        &#origin-box {
+            background-color: #FFC107;
+            /* El punto de anclaje: esquina superior izquierda */
+            transform-origin: 0 0;
+
+            &:hover {
+                /* Al rotar, lo hará desde esa esquina (0 0) */
+                transform: rotate(45deg);
+            }
+        }
+
+        /* --- Translate --- */
+        &#translate-box {
+            background-color: #2196F3;
+
+            &:hover {
+                /* Mueve 50px a la derecha, 30px arriba */
+                transform: translate(50px, -30px);
+            }
+        }
+
+        /* --- Rotate --- */
+        &#rotate-box {
+            background-color: #9C27B0;
+
+            &:hover {
+                /* Gira 60 grados sobre su centro (el origin por defecto) */
+                transform: rotate(60deg);
+            }
+        }
+
+        /* --- Scale --- */
+        &#scale-box {
+            background-color: #FF5722;
+
+            &:hover {
+                /* Aumenta el tamaño un 30% */
+                transform: scale(1.3);
+            }
+        }
+
+        /* --- Skew --- */
+        &#skew-box {
+            background-color: #607D8B;
+
+            &:hover {
+                /* Inclina o sesga el elemento */
+                transform: skew(-20deg, 10deg);
+            }
+        }
+    }
+}

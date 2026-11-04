@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Object-Fit</title>
+    <link rel="stylesheet" href="1.object-fit.css">
+</head>
+
+<body>
+
+    <h1>Demostración: <code>object-fit</code></h1>
+    <p>Usamos una imagen original de 400x200 (panorámica) y la forzamos en cajas de 200x200 (cuadradas).</p>
+
+    <div class="contenedor-demo">
+
+        <div class="caja-imagen">
+            <h3><code>object-fit: contain;</code></h3>
+            <p>(Se ve toda la imagen, pero deja espacios)</p>
+            <img id="img-contain" class="demo" src="https://picsum.photos/400/200" alt="Imagen con object-fit contain">
+        </div>
+
+        <div class="caja-imagen">
+            <h3><code>object-fit: cover;</code></h3>
+            <p>(Cubre todo, pero recorta los lados)</p>
+            <img id="img-cover" class="demo" src="https://picsum.photos/400/200" alt="Imagen con object-fit cover">
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.demo-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    .card {
+        border: 2px solid #333;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 8px;
+
+        .img-demo {
+            /* 1. Definimos un tamaño de contenedor ALTO y ESTRECHO */
+            width: 150px;
+            height: 250px;
+
+            /* 2. La imagen es ancha, así que 'cover' la recortará */
+            object-fit: cover;
+            border: 2px dashed crimson;
+            /* 4. Ahora movemos el "enfoque" de la imagen.
+                La imagen original es ancha (de un paisaje). */
+
+            &#img-izquierda {
+                /* Enfoca el lado izquierdo (0%) de la imagen */
+                object-position: 0% 50%;
+                /* (También puedes usar: 'left center') */
+            }
+
+            %#img-centro {
+                /* Enfoca el centro (50%) - Este es el valor por defecto */
+                object-position: 50% 50%;
+                /* (También puedes usar: 'center center') */
+            }
+
+            &#img-derecha {
+                /* Enfoca el lado derecho (100%) de la imagen */
+                object-position: 100% 50%;
+                /* (También puedes usar: 'right center') */
+            }
+        }
+    }
+}

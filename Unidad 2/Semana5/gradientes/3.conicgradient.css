@@ -1,0 +1,42 @@
+body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.caja-demo {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ccc;
+
+    h3 {
+        text-align: center;
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+
+    &.grad-1 {
+        background: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);
+        /* Vuelve al rojo para un ciclo perfecto */
+    }
+
+    &.grad-2 {
+        background: conic-gradient(#2ecc71 0% 30%, #3498db 30% 70%, #e74c3c 70% 100%);
+        border-radius: 50%;
+    }
+
+    &.grad-3 {
+        background: repeating-conic-gradient(black 0% 5%, white 5% 10%);
+    }
+
+    &.grad-4 {
+        background:
+            /* 1. Capa superior: Un círculo blanco en el centro */
+            radial-gradient(white 50%, transparent 50%),
+            /* 2. Capa inferior: El gráfico cónico */
+            conic-gradient(#f9e04a 0% 50%, #f39c12 50% 100%);
+        border-radius: 50%;
+    }
+}
