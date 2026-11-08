@@ -1,0 +1,55 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f4f9;
+    padding: 20px;
+    color: #333;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+
+    article {
+        width: 45%;
+        min-width: 350px;
+        border: 2px solid #007bff;
+        background: white;
+        padding: 15px;
+        border-radius: 8px;
+
+        h2 {
+            text-align: center;
+            margin-top: 0;
+        }
+
+        /* Esta es la URL de nuestra imagen SVG (círculo difuminado) */
+        .float-img {
+            float: left;
+            width: 150px;
+            height: 150px;
+            margin-right: 15px;
+
+            /* 1. Le decimos al texto que rodee la forma de esta URL */
+            shape-outside: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='150' height='150'><defs><radialGradient id='grad'><stop offset='0%' stop-color='black' stop-opacity='1'/><stop offset='100%' stop-color='black' stop-opacity='0'/></radialGradient></defs><circle cx='75' cy='75' r='75' fill='url(%23grad)'/></svg>");
+            shape-margin: 10px;
+        }
+
+        /* El texto respeta casi todos los píxeles */
+        &#demo-low .float-img {
+            shape-image-threshold: 0.1;
+        }
+
+        /* El texto ignora la mayoría de píxeles difuminados */
+        &#demo-high .float-img {
+            shape-image-threshold: 0.9;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-top: 0;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.contenedor-fondo {
+    /* Usamos una imagen de fondo para el body */
+    background-image: url('https://picsum.photos/seed/picsum/1200/800');
+    background-size: cover;
+    background-position: center;
+
+    /* Configuración para centrar la caja */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .caja-cristal {
+        width: 350px;
+        padding: 30px;
+        border-radius: 15px;
+        
+        /* 1. LA CLAVE: Fondo semitransparente */
+        /* Usamos blanco con 50% de opacidad (el .5 al final) */
+        background-color: rgba(255, 255, 255, 0.5);
+
+        /* 2. LA MAGIA: Aplicamos el filtro al fondo */
+        /* Desenfoque Gaussiano de 10 píxeles */
+        backdrop-filter: blur(10px);
+        
+        /* (Opcional) Un borde sutil para definir mejor el cristal */
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        
+        /* (Opcional) Una sombra suave */
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+
+        /* Estilos del texto */
+        color: #111;
+        text-align: center;
+    }
+}
+

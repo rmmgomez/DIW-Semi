@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=c, initial-scale=1.0">
+    <title>Ejemplo combinado</title>
+    <link rel="stylesheet" href="3.background-blend-mode.css">
+</head>
+
+<body>
+    <h1>Ejemplo combinado</h1>
+    <main>
+        <article>
+            <h2>Ejemplo background-blend-mode</h2>
+            <div id="blend-box">
+            </div>
+            <footer>
+                <p>La propiedad clave está en CSS: <code>background-blend-mode: overlay;</code></p>
+            </footer>
+        </article>
+        <article>
+            <h2>Ejemplo mix-blend-mode</h2>
+            <div id="backdrop">
+                <div id="foreground-box">
+                    <p>¡Este recuadro se está mezclando con el fondo!</p>
+                </div>
+            </div>
+            <footer>
+                <p>La propiedad clave está en el cuadro de primer plano: <code>mix-blend-mode: difference;</code></p>
+                <p class="explanation">El modo <code class="p-0 bg-transparent">difference</code> invierte el color del
+                    fondo donde el recuadro se superpone, creando un efecto dramático.</p>
+            </footer>
+        </article>
+    </main>
+
+</body>
+
+</html>

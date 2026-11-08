@@ -1,0 +1,38 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    background-color: #f0f4f8;
+    padding: 20px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+
+    article {
+        border: 2px solid #ccc;
+        background-color: white;
+        padding: 15px;
+        border-radius: 10px;
+
+        h2 {
+            margin-top: 0;
+        }
+
+        .demo-img {
+            /* 1. Forzamos a un cuadrado */
+            width: 200px;
+            height: 200px;
+            /* 2. Recortamos AMBAS con un círculo */
+            clip-path: circle(50% at 50% 50%);
+            /* (Un borde para ver la caja original) */
+            border: 3px dashed #e74c3c;
+
+            &#img-correcta {
+                object-fit: cover;
+            }
+        }
+    }
+}
