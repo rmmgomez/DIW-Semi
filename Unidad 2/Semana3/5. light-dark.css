@@ -1,6 +1,17 @@
 /* --- Configuración inicial para que el navegador sepa que la página soporta temas --- */
 :root {
     color-scheme: light dark;
+
+    --bg-color: light-dark(#eef2f5, #121826);
+    --bg-profile-card: light-dark(white, #1e293b);
+
+    --c-profile-card:light-dark(#334155, #cbd5e1);
+    --c-titulo:light-dark(#1e293b, white);
+
+    --border-profile-card: light-dark(#e2e8f0, #334155);
+    --border-img: light-dark(white, #1e293b);    
+
+    --box-shadow-profile-card: light-dark(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
 }
 
 body {
@@ -11,7 +22,7 @@ body {
     margin: 0;
 
     /* Usamos light-dark() para el fondo del body */
-    background-color: light-dark(#eef2f5, #121826);
+    background-color: var(--bg-color);
     transition: background-color 0.3s ease;
 }
 
@@ -21,11 +32,11 @@ body {
     overflow: hidden;
 
     /* Colores para la tarjeta y la sombra con light-dark() */
-    background-color: light-dark(white, #1e293b);
-    color: light-dark(#334155, #cbd5e1);
-    box-shadow: 0 10px 30px light-dark(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
+    background-color: var(--bg-profile-card);
+    color: var(--c-profile-card);
+    box-shadow: 0 10px 30px var(--box-shadow-profile-card);
 
-    border: 1px solid light-dark(#e2e8f0, #334155);
+    border: 1px solid var(--border-profile-card);
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 
     .profile-header {
@@ -43,7 +54,7 @@ body {
             border-radius: 50%;
 
             /* Borde de la imagen que se adapta al tema */
-            border: 5px solid light-dark(white, #1e293b);
+            border: 5px solid var(--border-img);
         }
     }
 
@@ -56,7 +67,7 @@ body {
             font-size: 1.75rem;
 
             /* Color del título */
-            color: light-dark(#1e293b, white);
+            color: var(--c-titulo);
         }
 
         .job-title {
@@ -71,14 +82,14 @@ body {
             padding: 1rem 0;
 
             /* Borde superior que cambia de color */
-            border-top: 1px solid light-dark(#e2e8f0, #334155);
+            border-top: 1px solid var(--border-profile-card);
 
             strong {
                 display: block;
                 font-size: 1.25rem;
 
                 /* Color de los números de las estadísticas */
-                color: light-dark(#1e293b, white);
+                color: var(--c-titulo);
             }
         }
 

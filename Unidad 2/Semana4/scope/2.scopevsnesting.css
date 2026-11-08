@@ -9,6 +9,9 @@ body {
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
 }
+.sidebar{
+    color: white;
+}
 
 /* Este es nuestro componente reutilizable */
 .mi-boton {
@@ -44,7 +47,7 @@ body {
     }
 
     /* Este 'button' SÓLO se aplica a botones dentro de .sidebar, pero NO a .mi-boton. */
-    button {
+    .boton {
         background-color: transparent;
         color: #eee;
         border: 1px solid #eee;

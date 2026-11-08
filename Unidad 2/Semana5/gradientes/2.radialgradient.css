@@ -1,0 +1,33 @@
+body {
+    background-color: #222;
+    color: #eee;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    margin: 0;
+}
+
+.esfera {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: radial-gradient(
+            /* Lo movemos "arriba y a la izquierda" del centro (50% 50%)
+            para simular un reflejo de luz. */
+            circle at 35% 35%,
+            /* Los Colores (de claro a oscuro) */
+            #D4E7FF 0%,
+            /* Un azul muy claro (el reflejo) */
+            #5B86E5 20%,
+            /* El color principal (azul medio) */
+            #360033 100%
+            /* El color de la sombra (morado oscuro) */
+        );
+
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5),
+        -10px -10px 30px rgba(91, 134, 229, 0.1);
+}

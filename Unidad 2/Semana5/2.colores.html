@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de Colores CSS</title>
+  <link rel="stylesheet" href="2.colores.css">
+</head>
+<body>
+
+  <h1>Demostración de Funciones de Color CSS</h1>
+
+  <div class="demo-section hsl-demo">
+    <h2>hsl(Tono, Saturación, Luminosidad)</h2>
+    <p>Cambiamos la luminosidad (L) de <code>55%</code> a <code>75%</code></p>
+    <div class="box">Haz hover</div>
+  </div>
+
+  <div class="demo-section hwb-demo">
+    <h2>hwb(Tono, Blancura, Negrura)</h2>
+    <div class="box box1">Base<br><code>hwb(140 0% 0%)</code></div>
+    <div class="box box2">Tinte<br><code>hwb(140 40% 0%)</code></div>
+    <div class="box box3">Sombra<br><code>hwb(140 0% 40%)</code></div>
+  </div>
+
+  <div class="demo-section lch-demo">
+    <h2>lch() y Gradientes Perceptuales</h2>
+    <p>Comparamos el gradiente de <code>blue</code> a <code>yellow</code>.</p>
+
+    <h3>Gradiente por Defecto (sRGB)</h3>
+    <p><code>linear-gradient(to right, blue, yellow)</code><br>Mira la "zona muerta" grisácea en el centro</p>
+    <div class="gradient gradient-rgb"></div>
+
+    <h3>Gradiente en LCH</h3>
+    <p><code>linear-gradient(in lch, blue, yellow)</code><br>La transición es suave y vibrante, pasando por verdes</p>
+    <div class="gradient gradient-lch"></div>
+
+    <h3>Gradiente en Oklch (Mejorado)</h3>
+    <p><code>linear-gradient(in oklch, blue, yellow)</code><br>Similar a LCH, a menudo considerado el más consistente para la percepción del brillo.</p>
+    <div class="gradient gradient-oklch"></div>
+  </div>
+
+  <div class="demo-section mix-demo">
+    <h2>color-mix()</h2>
+    <p>Una utilidad para mezclar colores. Perfecto para sistemas de diseño.</p>
+    <div class="box box1">Base<br><code>brand-color</code></div>
+    <div class="box box2">Mezcla<br><code>(base 60%, white 40%)</code></div>
+    <div class="box box3">Mezcla<br><code>(base 70%, black 30%)</code></div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+.contenedor-demo {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+
+    .caja-imagen {
+        border: 3px solid #333;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: #fff;
+
+        img.demo {
+            /* 1. Forzamos un tamaño cuadrado */
+            width: 200px;
+            height: 200px;
+
+            /* 2. Añadimos un fondo para ver el "espacio sobrante" */
+            background-color: #ddd;
+            border: 2px dashed #ff0000;
+
+            /* 3. Aplicamos los valores de object-fit */
+            &#img-contain {
+                object-fit: contain;
+                /* Encaja la imagen DENTRO del contenedor */
+            }
+
+            &#img-cover {
+                object-fit: cover;
+                /* CUBRE todo el contenedor */
+            }
+        }
+    }
+}

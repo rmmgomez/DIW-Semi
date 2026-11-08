@@ -1,0 +1,40 @@
+body {
+    text-align: center;
+    font-family: sans-serif;
+    background-color: #f7f7f7;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    .card {
+        border: 2px solid #333;
+        border-radius: 8px;
+        padding: 15px;
+        background-color: #fff;
+
+        img {
+            /* Escalamos la imagen de 16x16 a 160x160 */
+            width: 160px;
+            height: 160px;
+            border: 1px solid #aaa;
+
+            /* 1. El modo por defecto (borroso) */
+            &#img-auto {
+                image-rendering: auto;
+            }
+
+            /* 2. El modo nítido (bloques) */
+            &#img-pixelated {
+                image-rendering: pixelated;
+            }
+
+            /* 3. El modo nítido (bordes definidos) */
+            &#img-crisp {
+                image-rendering: crisp-edges;
+            }
+        }
+    }
+}

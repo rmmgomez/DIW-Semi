@@ -1,0 +1,80 @@
+:root {
+    --base-size: 15vmin;
+    --min-circle-size: 80px;
+    --max-circle-size: 200px;
+    --color-hue-base: 170;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    background-color: #f0f8ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+h1 {
+    font-size: min(10vw, 3.5rem);
+    color: #2c3e50;
+    margin-bottom: 40px;
+}
+
+.circles-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    gap: round(nearest, 22px, 5px);
+
+    .circle {
+        --scale: 1;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease-in-out;
+
+        &.circulo1 {
+            --scale: 0.8;
+        }
+
+        &.circulo2 {
+            --scale: 1.2;
+        }
+
+        &.circulo3 {
+            --scale: 1;
+        }
+
+        &.circulo4 {
+            --scale: 1.5;
+        }
+
+        --scaled-size: calc(var(--base-size) * var(--scale));
+        width: max(var(--min-circle-size), min(var(--max-circle-size), var(--scaled-size)));
+        height: max(var(--min-circle-size), min(var(--max-circle-size), var(--scaled-size)));
+        --color-hue: calc(var(--color-hue-base) + var(--scale) * 40);
+        --color-saturation: calc(50% + var(--scale) * 25%);
+        --color-lightness: calc(80% - var(--scale) * 20%);
+        background-color: hsl(var(--color-hue), var(--color-saturation), var(--color-lightness));
+
+        &::before {
+            content: attr(data-label);
+            font-size: max(12px, 0.8vw);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+        }
+    }
+}
