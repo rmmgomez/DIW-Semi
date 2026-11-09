@@ -1,0 +1,73 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    background-color: #f0f4f8;
+    padding-top: 30px;
+}
+
+h1 {
+    color: #333;
+}
+
+/* El contenedor que activa la animación al pasar el ratón */
+main {
+    width: 90%;
+    max-width: 600px;
+    height: 380px;
+    margin: 20px auto;
+    background-color: #dde1e7;
+    border: 2px dashed #b0b8c0;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+
+    .runner {
+        width: 80px;
+        height: 50px;
+        margin-bottom: 15px;
+        color: white;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        font-size: 0.9em;
+
+        /* --- LA TRANSICIÓN --- */
+        transition: margin-left 2s;
+        /* Aseguramos que el origen del cálculo sea la izquierda */
+        margin-left: 0;
+
+        /* --- 1. LAS FUNCIONES DE RITMO --- */
+        &#linear-box {
+            background-color: #e74c3c;
+            transition-timing-function: linear;
+        }
+
+        &#ease-box {
+            background-color: #3498db;
+            transition-timing-function: ease;
+        }
+
+        &#ease-in-box {
+            background-color: #2ecc71;
+            transition-timing-function: ease-in;
+        }
+
+        &#ease-out-box {
+            background-color: #f1c40f;
+            transition-timing-function: ease-out;
+        }
+
+        &#ease-in-out-box {
+            background-color: #9b59b6;
+            transition-timing-function: ease-in-out;
+        }
+    }
+
+    /* --- 2. LA ACCIÓN (El :hover) --- */
+    &:hover .runner {
+        /* 100% del padre MENOS 80px del propio runner */
+        margin-left: calc(100% - 80px);
+    }
+}

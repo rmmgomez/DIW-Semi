@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="4.shape-image-threshold.css">
+    <title>Ejemplo shape-outside</title>
+</head>
+
+<body>
+    <h1>Ejemplo shake it out</h1>
+    <main>
+        <article id="demo-low">
+            <h2>Threshold: 0.1 (Forma grande)</h2>
+            <img class="float-img"
+                src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='150' height='150'><defs><radialGradient id='grad'><stop offset='0%' stop-color='black' stop-opacity='1'/><stop offset='100%' stop-color='black' stop-opacity='0'/></radialGradient></defs><circle cx='75' cy='75' r='75' fill='url(%23grad)'/></svg>"
+                alt="Círculo difuminado">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                venenatis nisl id massa rhoncus, sed eleifend quam pretium.
+                Nulla facilisi. Duis vel est nec leo varius accumsan.</p>
+        </article>
+
+        <article id="demo-high">
+            <h2>Threshold: 0.9 (Forma pequeña)</h2>
+            <img class="float-img"
+                src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='150' height='150'><defs><radialGradient id='grad'><stop offset='0%' stop-color='black' stop-opacity='1'/><stop offset='100%' stop-color='black' stop-opacity='0'/></radialGradient></defs><circle cx='75' cy='75' r='75' fill='url(%23grad)'/></svg>"
+                alt="Círculo difuminado">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                venenatis nisl id massa rhoncus, sed eleifend quam pretium.
+                Nulla facilisi. Duis vel est nec leo varius accumsan.</p>
+        </article>
+
+    </main>
+</body>
+
+</html>

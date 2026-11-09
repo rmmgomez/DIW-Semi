@@ -1,0 +1,15 @@
+.caja-tintada {
+    width: 400px;
+    height: 250px;
+
+    /* --- 1. Definimos DOS fondos --- */
+    background-image: url("https://picsum.photos/id/1062/400/250");
+    background-color: #007bff;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+    background-blend-mode: multiply;
+}

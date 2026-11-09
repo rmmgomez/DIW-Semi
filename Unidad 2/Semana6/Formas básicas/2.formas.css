@@ -1,0 +1,63 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    background-color: #f4f4f9;
+    padding: 20px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+
+    .card {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+
+        h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .clipped-box {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            /* Esta línea punteada te muestra la caja original */
+            outline: 2px dashed #aaa;
+            outline-offset: 4px;
+
+            /* Separa la línea de la imagen */
+            /* Recorta un rectángulo 25px desde cada lado y redondea las esquinas 15px */
+            &#clip-inset {
+                clip-path: inset(25px 25px 25px 25px round 15px);
+            }
+
+            /* --- 2. circle() --- */
+            /* Recorta un círculo perfecto (50% de radio) en el centro (at 50% 50%) */
+            &#clip-circle {
+                clip-path: circle(50% at 50% 50%);
+            }
+
+            /* --- 3. ellipse() --- */
+            /* Recorta un óvalo: 45% de radio horizontal y 30% de radio vertical, en el centro */
+            &#clip-ellipse {
+                clip-path: ellipse(45% 30% at 50% 50%);
+            }
+
+            /* --- 4. polygon() --- */
+            /* Recorta un triángulo (3 puntos: punta arriba, base abajo) */
+            &#clip-polygon {
+                clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+            }
+
+            /* --- 5. path() --- */
+            /* Recorta usando una ruta SVG (un bocadillo de diálogo) */
+            &#clip-path {
+                clip-path: path('M 0 0 H 200 V 150 H 100 L 50 200 L 50 150 H 0 Z');
+            }
+        }
+    }
+}

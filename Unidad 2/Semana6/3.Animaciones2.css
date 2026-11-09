@@ -1,0 +1,89 @@
+@import url('3.keyframes.css');
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background-color: #f4f4f9;
+    padding: 40px;
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    .box {
+        width: 150px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.1em;
+        font-weight: bold;
+        color: white;
+        border-radius: 10px;
+        box-sizing: border-box;
+
+        &#box-pulso {
+            background-color: #3498db;
+            animation-name: pulso-brillo;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+
+        &#box-forma {
+            padding: 0.5rem;
+            background-color: #9b59b6;
+            animation: cambiar-forma-color 4s linear infinite alternate;
+            /*  4s de duración
+                linear: velocidad constante
+                infinite: se repite siempre
+                alternate: va y vuelve (de 0% a 100% y de 100% a 0%) */
+        }
+
+        &#box-temblor {
+            background-color: #e74c3c;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                animation-name: temblor;
+                animation-duration: 0.6s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: 1;
+                background-color: #c0392b;
+            }
+        }
+        &#box-fill-forwards {
+            background-color: #f1c40f;
+                animation-name: demo-forwards;
+                animation-duration: 2s;
+                animation-iteration-count: 1; /* Solo se ejecuta 1 vez */
+                
+                /* PROPIEDAD CLAVE: 'forwards'
+                Mantiene los estilos del keyframe 100% cuando termina.
+                */
+                animation-fill-mode: forwards;
+        }
+
+        &#box-fill-backwards {
+            background-color: #e67e22;
+            
+            animation-name: demo-backwards;
+            animation-duration: 2s;
+            animation-delay: 2s; /* Delay crucial para 'backwards' */
+            animation-iteration-count: 1;
+
+            /* PROPIEDAD CLAVE: 'backwards'
+            Aplica los estilos del keyframe 0% durante el 'delay'.
+            */
+            animation-fill-mode: backwards;            
+        }
+    }
+}
